@@ -1,0 +1,571 @@
+# This file is distributed under the same license as the Great package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Great\n"
+"POT-Creation-Date: 2016-03-23 01:35+0200\n"
+"PO-Revision-Date: 2016-03-23 03:23+0200\n"
+"Last-Translator: \n"
+"Language-Team: Alvele.com\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\\\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_ex\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "A keresett oldal nem található."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Úgy tűnik, ezen a helyen nem található amit kerestünk. Talán egy újabb keresés segíthetne."
+
+#: comments.php:36 comments.php:57
+msgid "Comment navigation"
+msgstr "Hozzászólás navigáció"
+
+#: comments.php:39 comments.php:60
+msgid "Older Comments"
+msgstr "Korábbi hozzászólás"
+
+#: comments.php:40 comments.php:61
+msgid "Newer Comments"
+msgstr "Újabb hozzászólás"
+
+#: comments.php:73
+msgid "Comments are closed."
+msgstr "A hozzászólások jelenleg nem engedélyezettek ezen a részen."
+
+#: comments.php:83
+msgid "Name"
+msgstr "Név"
+
+#: comments.php:84 inc/options-config.php:291 inc/options-config.php:297
+#: inc/options-config.php:303
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:85
+msgid "Website"
+msgstr "Honlap"
+
+#: comments.php:91
+msgid "Post Comment"
+msgstr "Hozzászólás küldése"
+
+#: comments.php:92
+msgid "Cancel reply"
+msgstr "Kilépés a válaszból"
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr "Nincs megfelelő találat"
+
+#: content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Készen állunk az első bejegyzés közzétételére? <a href=\"%1$s\">Kezdőlépések</a>."
+
+#: content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Elnézést, nem találunk a keresési feltételeknek megfelelő eredményt. Másik kulcsszóval, kifejezéssel újra kellene kezdeni egy keresést."
+
+#: content-none.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Úgy tűnik, nem találtuk meg amit kerestünk. :) Talán, egy újabb keresés segíthetne..."
+
+#: content-page.php:21 inc/template-tags.php:17 inc/template-tags.php:210
+#: inc/template-tags.php:223
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: content-page.php:32 content-single.php:27 content.php:37
+msgid "Pages:"
+msgstr "Oldal:"
+
+#: content.php:29
+msgid "Continue reading %s"
+msgstr "%s részletei..."
+
+#: functions.php:54
+msgid "Primary Menu"
+msgstr "Elsődleges menü"
+
+#: functions.php:104 inc/options-config.php:590
+msgid "Sidebar"
+msgstr "Oldalsáv"
+
+#: functions.php:113 inc/options-config.php:124 inc/options-config.php:257
+msgid "Header"
+msgstr "Fejrész"
+
+#: functions.php:122 functions.php:131 functions.php:140
+#: inc/options-config.php:148 inc/options-config.php:328
+#: inc/options-config.php:543
+msgid "Footer"
+msgstr "Lábrész"
+
+#: functions.php:122
+msgid "Left"
+msgstr "Bal"
+
+#: functions.php:131
+msgid "Center"
+msgstr "Közép"
+
+#: functions.php:140
+msgid "Right"
+msgstr "Jobb"
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "Tartalomhoz"
+
+#: header.php:62 inc/options-config.php:439
+msgid "Menu"
+msgstr "Menü"
+
+#: header.php:64
+msgid "Close"
+msgstr "Bezárás"
+
+#: image.php:24
+msgid "Previous"
+msgstr "Előző"
+
+#: image.php:25
+msgid "Next"
+msgstr "Következő"
+
+#: inc/admin/class.customized-controls.php:15
+#: inc/admin/class.customized-controls.php:39
+#: inc/admin/class.customized-controls.php:66
+msgid "Premium"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:117
+msgid "Do you like this theme?"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:119
+msgid "Please write a review and to promote your website!"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:123
+msgid "Support Forums"
+msgstr "Támogató fórum"
+
+#: inc/admin/class.customizer-api-wrapper.php:88
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/extras.php:65
+msgid "Page %s"
+msgstr "Oldal %s"
+
+#: inc/extras.php:121 inc/options-config.php:360 inc/options-config.php:492
+#: inc/options-config.php:493
+msgid "Read more..."
+msgstr "Bővebben..."
+
+#: inc/extras.php:212
+#, php-format
+msgid "Copyright &copy; %1$d %2$s."
+msgstr ""
+
+#: inc/extras.php:212
+msgid "Powered by WordPress"
+msgstr "A honlap lelke a WordPress"
+
+#: inc/extras.php:212 inc/template-tags.php:90
+msgid "Author: %s"
+msgstr "Szerző: %s"
+
+#: inc/extras.php:212
+msgid "<span>Active theme</span> %s"
+msgstr "<span>Bekapcsolt sablon</span> %s"
+
+#: inc/featured-pages.php:35 inc/options-config.php:96
+msgid "Learn More"
+msgstr "Tudj meg többet"
+
+#: inc/options-config.php:4 inc/options-config.php:9
+#: inc/options-config.php:225
+msgid "Hide"
+msgstr "Elrejtés"
+
+#: inc/options-config.php:17
+msgid "First, please enable 'slider' widget."
+msgstr ""
+
+#: inc/options-config.php:23
+msgid "Hide texts"
+msgstr ""
+
+#: inc/options-config.php:39 inc/options-config.php:574
+msgid "Slider"
+msgstr ""
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "Select Page"
+msgstr "Oldal kiválasztása"
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "Featured Image"
+msgstr "Kiemelt kép"
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "(required)"
+msgstr "(kötelező)"
+
+#: inc/options-config.php:51 inc/options-config.php:113
+#: inc/options-config.php:203 inc/options-config.php:285
+#: inc/options-config.php:303 inc/options-config.php:321
+msgid "Custom Link"
+msgstr "Egyedi hivatkozás"
+
+#: inc/options-config.php:62
+msgid "First, please enable 'Featured Pages' widget."
+msgstr ""
+
+#: inc/options-config.php:78 inc/template-tags.php:248
+msgid "Page"
+msgstr "Oldal"
+
+#: inc/options-config.php:90
+msgid "Alternative Text"
+msgstr "Helyettesítő szöveg"
+
+#: inc/options-config.php:95
+msgid "Button Text"
+msgstr ""
+
+#: inc/options-config.php:102
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/options-config.php:108
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/options-config.php:129 inc/options-config.php:153
+msgid "Enable"
+msgstr "Bekapcsolás"
+
+#: inc/options-config.php:136 inc/options-config.php:160
+#: inc/options-config.php:178
+msgid "Description"
+msgstr "Leírás"
+
+#: inc/options-config.php:141 inc/options-config.php:165
+#: inc/options-config.php:183 inc/options-config.php:602
+msgid "Size"
+msgstr "Méret"
+
+#: inc/options-config.php:172 inc/options-config.php:429
+#: inc/options-config.php:434 inc/options-config.php:554
+#: inc/options-config.php:560 inc/options-config.php:566
+msgid "Widgets"
+msgstr "Widgetek"
+
+#: inc/options-config.php:207 inc/options-config.php:209
+#: inc/options-config.php:560
+msgid "Title"
+msgstr "Cím"
+
+#: inc/options-config.php:215
+msgid "Enter the URL"
+msgstr "URL megadása"
+
+#: inc/options-config.php:220
+msgid "Open link in a new window/tab"
+msgstr "Hivatkozás megnyitása új ablakban/új fülön"
+
+#: inc/options-config.php:227
+msgid "Icon"
+msgstr "ikon"
+
+#: inc/options-config.php:234 inc/options-config.php:348
+#: inc/options-config.php:366 inc/options-config.php:457
+msgid "Color"
+msgstr "Szín"
+
+#: inc/options-config.php:253 inc/options-config.php:254
+msgid "Great Theme Options"
+msgstr ""
+
+#: inc/options-config.php:262
+msgid "Logo Upload"
+msgstr "Logó feltöltése"
+
+#: inc/options-config.php:267
+msgid "A search form for your site."
+msgstr "Honlap keresési űrlap"
+
+#: inc/options-config.php:273 inc/options-config.php:279
+#: inc/options-config.php:285
+msgid "Address"
+msgstr "cím"
+
+#: inc/options-config.php:279 inc/options-config.php:297
+#: inc/options-config.php:315 inc/options-config.php:382
+#: inc/options-config.php:451 inc/options-config.php:473
+#: inc/options-config.php:532 inc/options-config.php:566
+msgid "Text color"
+msgstr "Szövegszín"
+
+#: inc/options-config.php:309 inc/options-config.php:315
+#: inc/options-config.php:321
+msgid "Phone Number"
+msgstr "Telefonszám"
+
+#: inc/options-config.php:331 inc/options-config.php:336
+#: inc/options-config.php:348
+msgid "Quote"
+msgstr "Idéz"
+
+#: inc/options-config.php:343
+msgid "Author"
+msgstr "Szerző"
+
+#: inc/options-config.php:355 inc/options-config.php:366
+msgid "Link"
+msgstr "Hivatkozás"
+
+#: inc/options-config.php:361 inc/options-config.php:479
+msgid "Link Text"
+msgstr "Hivatkozás szövege"
+
+#: inc/options-config.php:371
+msgid "Footer information text"
+msgstr ""
+
+#: inc/options-config.php:377
+msgid "Text"
+msgstr "HTML"
+
+#: inc/options-config.php:388 inc/options-config.php:444
+#: inc/options-config.php:485
+msgid "Font Sizes"
+msgstr "Betűméret"
+
+#: inc/options-config.php:400
+msgid "Style"
+msgstr "Stílus"
+
+#: inc/options-config.php:400
+msgid "Display Settings"
+msgstr "Képernyő beállításai"
+
+#: inc/options-config.php:404
+msgid "Primary Color"
+msgstr "elsődleges szín"
+
+#: inc/options-config.php:411 inc/options-config.php:429
+#: inc/options-config.php:464
+msgid "Background Image"
+msgstr "Háttér-kép"
+
+#: inc/options-config.php:411 inc/options-config.php:416
+#: inc/options-config.php:422
+msgid "Content"
+msgstr "Tartalom"
+
+#: inc/options-config.php:416
+msgid "Border color"
+msgstr "Szegély színe"
+
+#: inc/options-config.php:422 inc/options-config.php:434
+#: inc/options-config.php:548 inc/options-config.php:554
+msgid "Background color"
+msgstr "Háttérszín"
+
+#: inc/options-config.php:468
+msgid "All Posts"
+msgstr "Összes bejegyzés"
+
+#: inc/options-config.php:497
+msgid "Metadata"
+msgstr "Meta adat"
+
+#: inc/options-config.php:502
+msgid "Display post date?"
+msgstr "Megjelenítsük a bejegyzés dátumát?"
+
+#: inc/options-config.php:508
+msgid "Comments Count &amp; Link"
+msgstr ""
+
+#: inc/options-config.php:514
+msgid "Display item author if available?"
+msgstr "Szerző megjelenítése, ha elérhető?"
+
+#: inc/options-config.php:520
+msgid "View Category"
+msgstr "Kategória megtekintése"
+
+#: inc/options-config.php:526
+msgid "View Tag"
+msgstr "Címke megtekintése"
+
+#: inc/options-config.php:538
+msgid "Posts navigation"
+msgstr "Bejegyzés navigáció"
+
+#: inc/options-config.php:578
+msgid "Featured Pages"
+msgstr ""
+
+#: inc/options-config.php:582
+msgid "Social Media"
+msgstr "Közösségi média"
+
+#: inc/options-config.php:586
+msgid "Layout"
+msgstr "Elrendezés"
+
+#: inc/options-config.php:590 inc/options-config.php:635
+msgid "Alignment"
+msgstr "Illesztés"
+
+#: inc/options-config.php:593 inc/options-config.php:640
+msgid "Align Right"
+msgstr "Jobbra igazítás"
+
+#: inc/options-config.php:594 inc/options-config.php:638
+msgid "Align Left"
+msgstr "Balra igazítás"
+
+#: inc/options-config.php:597 inc/options-config.php:602
+#: inc/options-config.php:613 inc/options-config.php:624
+#: inc/options-config.php:635
+msgid "Logo"
+msgstr ""
+
+#: inc/options-config.php:602
+msgid "Set to 0 for default."
+msgstr ""
+
+#: inc/options-config.php:613
+msgid "Vertical space"
+msgstr "Függőleges táv"
+
+#: inc/options-config.php:624
+msgid "Horizontal space"
+msgstr "Vízszintes táv"
+
+#: inc/options-config.php:639
+msgid "Align Center"
+msgstr "Középre igazítás"
+
+#: inc/options-config.php:645
+msgid "Advanced Options"
+msgstr "Haladó lehetőségek"
+
+#: inc/options-config.php:649
+msgid "Custom CSS Styles"
+msgstr "Egyéni CSS stílusok"
+
+#: inc/options-config.php:655
+msgid "Restore Defaults"
+msgstr "Alapértelmezettek visszaállítása"
+
+#: inc/options-config.php:660
+msgid "Links"
+msgstr "Hivatkozások"
+
+#: inc/template-tags.php:40
+msgid "Leave a comment"
+msgstr "Hozzászólás"
+
+#: inc/template-tags.php:40
+msgid "1 Comment"
+msgstr "1 hozzászólás"
+
+#: inc/template-tags.php:40
+msgid "% Comments"
+msgstr "% hozzászólás"
+
+#: inc/template-tags.php:52
+msgid "Featured"
+msgstr "Kiemelt"
+
+#: inc/template-tags.php:65 inc/template-tags.php:71
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:86
+msgid "Category: %s"
+msgstr "Kategória: %s"
+
+#: inc/template-tags.php:88
+msgid "Tag: %s"
+msgstr "Címke: %s"
+
+#: inc/template-tags.php:92
+msgid "Year: %s"
+msgstr "Év: %s"
+
+#: inc/template-tags.php:94
+msgid "Month: %s"
+msgstr "Hónap: %s"
+
+#: inc/template-tags.php:96
+msgid "Day: %s"
+msgstr "Nap: %s"
+
+#: inc/template-tags.php:118
+msgid "Archives: %s"
+msgstr "Archívumok: %s"
+
+#: inc/template-tags.php:122
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: inc/template-tags.php:124
+msgid "Archives"
+msgstr "Archívum"
+
+#: inc/template-tags.php:210
+msgid "Pingback:"
+msgstr "Visszajelzés:"
+
+#: inc/template-tags.php:226
+msgid "Your comment is awaiting moderation."
+msgstr "A hozzászólás rendszer-moderációra várakozik."
+
+#: inc/template-tags.php:254
+msgid "Older posts"
+msgstr "Régebbi bejegyzések"
+
+#: inc/template-tags.php:258
+msgid "Newer posts"
+msgstr "Újabb bejegyzések"
+
+#: inc/template-tags.php:296
+msgid "Read More..."
+msgstr "Bővebben..."
+
+#: inc/widgets/widget-featured.php:36 inc/widgets/widget-slider.php:36
+msgid "There are no options for this widget."
+msgstr "Ehhez a widgethez nincs beállítási lehetőség."
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr "%s kifejezésre történő keresés eredménye"
+
+#: searchform.php:8
+msgid "Search &hellip;"
+msgstr "Keresés &hellip;"
+
+#: searchform.php:8
+msgid "Search for:"
+msgstr "Keresés:"
+
+#: searchform.php:9
+msgid "Search"
+msgstr "Keresés"

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="127d82d2-90ae-4172-87b1-0832f75aabdd" name="local" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="D:\proj\nubi.me" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

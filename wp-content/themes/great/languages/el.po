@@ -1,0 +1,571 @@
+# This file is distributed under the same license as the Great package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Great\n"
+"POT-Creation-Date: 2016-03-23 01:35+0200\n"
+"PO-Revision-Date: 2016-03-23 03:22+0200\n"
+"Last-Translator: \n"
+"Language-Team: Alvele.com\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\\\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_ex\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ωπα! Αυτή η σελίδα δε βρέθηκε."
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Φαίνεται ότι δεν βρέθηκε τίποτα σε αυτή την τοποθεσία. Μήπως να δοκιμάζατε μια αναζήτηση;"
+
+#: comments.php:36 comments.php:57
+msgid "Comment navigation"
+msgstr "Πλοήγηση σχολίων"
+
+#: comments.php:39 comments.php:60
+msgid "Older Comments"
+msgstr "Παλιότερα σχόλια"
+
+#: comments.php:40 comments.php:61
+msgid "Newer Comments"
+msgstr "Νεώτερα σχόλια"
+
+#: comments.php:73
+msgid "Comments are closed."
+msgstr "Τα σχόλια έχουν κλείσει."
+
+#: comments.php:83
+msgid "Name"
+msgstr "Όνομα"
+
+#: comments.php:84 inc/options-config.php:291 inc/options-config.php:297
+#: inc/options-config.php:303
+msgid "Email"
+msgstr "Ηλ. διεύθυνση"
+
+#: comments.php:85
+msgid "Website"
+msgstr "Ιστότοπος"
+
+#: comments.php:91
+msgid "Post Comment"
+msgstr "Δημοσίευση σχολίου"
+
+#: comments.php:92
+msgid "Cancel reply"
+msgstr "Ακύρωση απάντησης"
+
+#: content-none.php:14
+msgid "Nothing Found"
+msgstr "Κανένα αποτέλεσμα"
+
+#: content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Έτοιμοι για την πρώτη σας δημοσίευση; <a href=\"%1$s\">Πάμε</a>!"
+
+#: content-none.php:24
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Λυπάμαι, αλλά τίποτα δεν βρέθηκε που ταιριάζει στους όρους αναζήτησης. Παρακαλώ προσπαθήστε ξανά με άλλες λέξεις κλειδιά."
+
+#: content-none.php:29
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Φαίνεται ότι δεν βρήκαμε αυτό που ζητούσατε. Αν θέλετε, δοκιμάστε την αναζήτηση."
+
+#: content-page.php:21 inc/template-tags.php:17 inc/template-tags.php:210
+#: inc/template-tags.php:223
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: content-page.php:32 content-single.php:27 content.php:37
+msgid "Pages:"
+msgstr "Σελίδες:"
+
+#: content.php:29
+msgid "Continue reading %s"
+msgstr "Συνεχίστε την ανάγνωση %s"
+
+#: functions.php:54
+msgid "Primary Menu"
+msgstr "Κύριο μενού"
+
+#: functions.php:104 inc/options-config.php:590
+msgid "Sidebar"
+msgstr "Πλευρική στήλη"
+
+#: functions.php:113 inc/options-config.php:124 inc/options-config.php:257
+msgid "Header"
+msgstr "Κεφαλίδα"
+
+#: functions.php:122 functions.php:131 functions.php:140
+#: inc/options-config.php:148 inc/options-config.php:328
+#: inc/options-config.php:543
+msgid "Footer"
+msgstr "Υποσέλιδο"
+
+#: functions.php:122
+msgid "Left"
+msgstr "Αριστερά"
+
+#: functions.php:131
+msgid "Center"
+msgstr "Κέντρο"
+
+#: functions.php:140
+msgid "Right"
+msgstr "Δεξιά"
+
+#: header.php:23
+msgid "Skip to content"
+msgstr "Μετάβαση σε περιεχόμενο"
+
+#: header.php:62 inc/options-config.php:439
+msgid "Menu"
+msgstr "Μενού"
+
+#: header.php:64
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: image.php:24
+msgid "Previous"
+msgstr "Προηγούμενη"
+
+#: image.php:25
+msgid "Next"
+msgstr "Επόμενη"
+
+#: inc/admin/class.customized-controls.php:15
+#: inc/admin/class.customized-controls.php:39
+#: inc/admin/class.customized-controls.php:66
+msgid "Premium"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:117
+msgid "Do you like this theme?"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:119
+msgid "Please write a review and to promote your website!"
+msgstr ""
+
+#: inc/admin/class.customized-controls.php:123
+msgid "Support Forums"
+msgstr "Φόρουμ υποστήριξης"
+
+#: inc/admin/class.customizer-api-wrapper.php:88
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/extras.php:65
+msgid "Page %s"
+msgstr "Σελίδα %s"
+
+#: inc/extras.php:121 inc/options-config.php:360 inc/options-config.php:492
+#: inc/options-config.php:493
+msgid "Read more..."
+msgstr "Διαβάστε περισσότερα..."
+
+#: inc/extras.php:212
+#, php-format
+msgid "Copyright &copy; %1$d %2$s."
+msgstr ""
+
+#: inc/extras.php:212
+msgid "Powered by WordPress"
+msgstr "Κατασκευασμένο με WordPress"
+
+#: inc/extras.php:212 inc/template-tags.php:90
+msgid "Author: %s"
+msgstr "Συντάκτης: %s"
+
+#: inc/extras.php:212
+msgid "<span>Active theme</span> %s"
+msgstr "<span>Ενεργό θέμα</span> %s"
+
+#: inc/featured-pages.php:35 inc/options-config.php:96
+msgid "Learn More"
+msgstr "Μάθε περισσότερα"
+
+#: inc/options-config.php:4 inc/options-config.php:9
+#: inc/options-config.php:225
+msgid "Hide"
+msgstr "Απόκρυψη"
+
+#: inc/options-config.php:17
+msgid "First, please enable 'slider' widget."
+msgstr ""
+
+#: inc/options-config.php:23
+msgid "Hide texts"
+msgstr ""
+
+#: inc/options-config.php:39 inc/options-config.php:574
+msgid "Slider"
+msgstr ""
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "Select Page"
+msgstr "Επιλέξτε σελίδα"
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "Featured Image"
+msgstr "Επιλεγμένη εικόνα"
+
+#: inc/options-config.php:44 inc/options-config.php:83
+msgid "(required)"
+msgstr "(υποχρεωτικό)"
+
+#: inc/options-config.php:51 inc/options-config.php:113
+#: inc/options-config.php:203 inc/options-config.php:285
+#: inc/options-config.php:303 inc/options-config.php:321
+msgid "Custom Link"
+msgstr "Προσαρμοσμένος σύνδεσμος"
+
+#: inc/options-config.php:62
+msgid "First, please enable 'Featured Pages' widget."
+msgstr ""
+
+#: inc/options-config.php:78 inc/template-tags.php:248
+msgid "Page"
+msgstr "Σελίδα"
+
+#: inc/options-config.php:90
+msgid "Alternative Text"
+msgstr "Εναλλακτικό κείμενο"
+
+#: inc/options-config.php:95
+msgid "Button Text"
+msgstr ""
+
+#: inc/options-config.php:102
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/options-config.php:108
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/options-config.php:129 inc/options-config.php:153
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: inc/options-config.php:136 inc/options-config.php:160
+#: inc/options-config.php:178
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: inc/options-config.php:141 inc/options-config.php:165
+#: inc/options-config.php:183 inc/options-config.php:602
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: inc/options-config.php:172 inc/options-config.php:429
+#: inc/options-config.php:434 inc/options-config.php:554
+#: inc/options-config.php:560 inc/options-config.php:566
+msgid "Widgets"
+msgstr "Μονάδες"
+
+#: inc/options-config.php:207 inc/options-config.php:209
+#: inc/options-config.php:560
+msgid "Title"
+msgstr "Τίτλος"
+
+#: inc/options-config.php:215
+msgid "Enter the URL"
+msgstr "Δώστε το URL"
+
+#: inc/options-config.php:220
+msgid "Open link in a new window/tab"
+msgstr "Άνοιγμα συνδέσμου σε νέο παράθυρο/καρτέλα"
+
+#: inc/options-config.php:227
+msgid "Icon"
+msgstr "icon"
+
+#: inc/options-config.php:234 inc/options-config.php:348
+#: inc/options-config.php:366 inc/options-config.php:457
+msgid "Color"
+msgstr "Χρώμα"
+
+#: inc/options-config.php:253 inc/options-config.php:254
+msgid "Great Theme Options"
+msgstr ""
+
+#: inc/options-config.php:262
+msgid "Logo Upload"
+msgstr "Μεταφόρτωση Λογότυπου"
+
+#: inc/options-config.php:267
+msgid "A search form for your site."
+msgstr "Μια φόρμα αναζήτησης για τον ιστότοπό σας."
+
+#: inc/options-config.php:273 inc/options-config.php:279
+#: inc/options-config.php:285
+msgid "Address"
+msgstr "διεύθυνση"
+
+#: inc/options-config.php:279 inc/options-config.php:297
+#: inc/options-config.php:315 inc/options-config.php:382
+#: inc/options-config.php:451 inc/options-config.php:473
+#: inc/options-config.php:532 inc/options-config.php:566
+msgid "Text color"
+msgstr "Χρώμα κειμένου"
+
+#: inc/options-config.php:309 inc/options-config.php:315
+#: inc/options-config.php:321
+msgid "Phone Number"
+msgstr "Τηλεφωνικό νούμερο"
+
+#: inc/options-config.php:331 inc/options-config.php:336
+#: inc/options-config.php:348
+msgid "Quote"
+msgstr "Παράθεμα"
+
+#: inc/options-config.php:343
+msgid "Author"
+msgstr "Συντάκτης"
+
+#: inc/options-config.php:355 inc/options-config.php:366
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: inc/options-config.php:361 inc/options-config.php:479
+msgid "Link Text"
+msgstr "Κείμενο συνδέσμου"
+
+#: inc/options-config.php:371
+msgid "Footer information text"
+msgstr ""
+
+#: inc/options-config.php:377
+msgid "Text"
+msgstr "Κείμενο"
+
+#: inc/options-config.php:388 inc/options-config.php:444
+#: inc/options-config.php:485
+msgid "Font Sizes"
+msgstr "Μεγέθη γραμματοσειράς"
+
+#: inc/options-config.php:400
+msgid "Style"
+msgstr "Στυλ"
+
+#: inc/options-config.php:400
+msgid "Display Settings"
+msgstr "Εμφάνιση ρυθμίσεων"
+
+#: inc/options-config.php:404
+msgid "Primary Color"
+msgstr "Χρώμα"
+
+#: inc/options-config.php:411 inc/options-config.php:429
+#: inc/options-config.php:464
+msgid "Background Image"
+msgstr "Εικόνα φόντου"
+
+#: inc/options-config.php:411 inc/options-config.php:416
+#: inc/options-config.php:422
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#: inc/options-config.php:416
+msgid "Border color"
+msgstr "Χρώμα περιθώριου"
+
+#: inc/options-config.php:422 inc/options-config.php:434
+#: inc/options-config.php:548 inc/options-config.php:554
+msgid "Background color"
+msgstr "Χρώμα υπόβαθρου"
+
+#: inc/options-config.php:468
+msgid "All Posts"
+msgstr "Όλα τα άρθρα"
+
+#: inc/options-config.php:497
+msgid "Metadata"
+msgstr "Μεταδεδομένα"
+
+#: inc/options-config.php:502
+msgid "Display post date?"
+msgstr "Να εμφανίζεται ημερομηνία άρθρου;"
+
+#: inc/options-config.php:508
+msgid "Comments Count &amp; Link"
+msgstr ""
+
+#: inc/options-config.php:514
+msgid "Display item author if available?"
+msgstr "Προβολή συντάκτη αν υπάρχει;"
+
+#: inc/options-config.php:520
+msgid "View Category"
+msgstr "Προβολή κατηγορίας"
+
+#: inc/options-config.php:526
+msgid "View Tag"
+msgstr "Προβολή ετικέτας"
+
+#: inc/options-config.php:538
+msgid "Posts navigation"
+msgstr "Πλοήγηση άρθρων"
+
+#: inc/options-config.php:578
+msgid "Featured Pages"
+msgstr ""
+
+#: inc/options-config.php:582
+msgid "Social Media"
+msgstr "Μεσα ΚΟΙΝΩΝΙΚΗΣ ΔΙΚΤΥΩΣΗΣ"
+
+#: inc/options-config.php:586
+msgid "Layout"
+msgstr "Διαρρύθμιση"
+
+#: inc/options-config.php:590 inc/options-config.php:635
+msgid "Alignment"
+msgstr "Στοίχιση"
+
+#: inc/options-config.php:593 inc/options-config.php:640
+msgid "Align Right"
+msgstr "Στοίχιση δεξιά"
+
+#: inc/options-config.php:594 inc/options-config.php:638
+msgid "Align Left"
+msgstr "Στοίχιση αριστερά"
+
+#: inc/options-config.php:597 inc/options-config.php:602
+#: inc/options-config.php:613 inc/options-config.php:624
+#: inc/options-config.php:635
+msgid "Logo"
+msgstr ""
+
+#: inc/options-config.php:602
+msgid "Set to 0 for default."
+msgstr ""
+
+#: inc/options-config.php:613
+msgid "Vertical space"
+msgstr "Κατακόρυφο διάστημα"
+
+#: inc/options-config.php:624
+msgid "Horizontal space"
+msgstr "Οριζόντιο διάστημα"
+
+#: inc/options-config.php:639
+msgid "Align Center"
+msgstr "Στοίχιση στο κέντρο"
+
+#: inc/options-config.php:645
+msgid "Advanced Options"
+msgstr "Προχωρημένες ρυθμίσεις"
+
+#: inc/options-config.php:649
+msgid "Custom CSS Styles"
+msgstr "Τροποποιημένα στυλ CSS"
+
+#: inc/options-config.php:655
+msgid "Restore Defaults"
+msgstr "Επαναφορά Προεπιλογών"
+
+#: inc/options-config.php:660
+msgid "Links"
+msgstr "Σύνδεσμοι"
+
+#: inc/template-tags.php:40
+msgid "Leave a comment"
+msgstr "Σχολιάστε"
+
+#: inc/template-tags.php:40
+msgid "1 Comment"
+msgstr "1 Σχόλιο"
+
+#: inc/template-tags.php:40
+msgid "% Comments"
+msgstr "% Σχόλια"
+
+#: inc/template-tags.php:52
+msgid "Featured"
+msgstr "Επιλεγμένα"
+
+#: inc/template-tags.php:65 inc/template-tags.php:71
+msgid ", "
+msgstr ","
+
+#: inc/template-tags.php:86
+msgid "Category: %s"
+msgstr "Κατηγορία: %s"
+
+#: inc/template-tags.php:88
+msgid "Tag: %s"
+msgstr "Ετικέτα: %s"
+
+#: inc/template-tags.php:92
+msgid "Year: %s"
+msgstr "Έτος: %s"
+
+#: inc/template-tags.php:94
+msgid "Month: %s"
+msgstr "Μήνας: %s"
+
+#: inc/template-tags.php:96
+msgid "Day: %s"
+msgstr "Ημέρα: %s"
+
+#: inc/template-tags.php:118
+msgid "Archives: %s"
+msgstr "Ιστορικό: %s"
+
+#: inc/template-tags.php:122
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: inc/template-tags.php:124
+msgid "Archives"
+msgstr "Αρχείο"
+
+#: inc/template-tags.php:210
+msgid "Pingback:"
+msgstr "Παράθεμα:"
+
+#: inc/template-tags.php:226
+msgid "Your comment is awaiting moderation."
+msgstr "Το σχόλιό σας θα ελεγχθεί πρώτα από συντονιστή."
+
+#: inc/template-tags.php:254
+msgid "Older posts"
+msgstr "Παλαιότερα άρθρα"
+
+#: inc/template-tags.php:258
+msgid "Newer posts"
+msgstr "Νεώτερα άρθρα"
+
+#: inc/template-tags.php:296
+msgid "Read More..."
+msgstr "Διαβάστε περισσότερα..."
+
+#: inc/widgets/widget-featured.php:36 inc/widgets/widget-slider.php:36
+msgid "There are no options for this widget."
+msgstr "Η μονάδα αυτή δεν έχει επιλογές."
+
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr "Αποτελέσματα για %s"
+
+#: searchform.php:8
+msgid "Search &hellip;"
+msgstr "Αναζήτηση&hellip;"
+
+#: searchform.php:8
+msgid "Search for:"
+msgstr "Αναζήτηση για:"
+
+#: searchform.php:9
+msgid "Search"
+msgstr "Αναζήτηση"
