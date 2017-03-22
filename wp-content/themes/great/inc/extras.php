@@ -139,10 +139,6 @@ function great_social_media( $position = "header" ) {
 	if ( count ($icons) )
 		printf('<div class="sm sm-%1$s">%3$s %2$s</div>', $position, implode( " ", $icons ), $after_text) ;
 }
-
-function show_vistors() {
-	echo "hello world";
-}
 //
 // Quote
 function great_footer_quote() {
