@@ -176,6 +176,7 @@ div.edui-box {
 
 .edui-default .edui-editor-iframeholder {
     position: relative;
+    height: 500px;
     /*for fix ie6 toolbarmsg under iframe bug. relative -> static */
     /*_position: static !important;*
 }
@@ -604,7 +605,7 @@ div.edui-box {
 
 .edui-default  .edui-for-leftspacing .edui-icon {
   background-image: url(../images/plugins.png) !important;
-  background-position: -20px 0px;edui-icon
+  background-position: -20px 0px;
 }
 
 .edui-default  .edui-for-rowspacingbottom .edui-icon {
