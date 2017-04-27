@@ -7,9 +7,9 @@
 class great_featured_widget extends WP_Widget
 {
 	 function great_featured_widget(){
-            
-            $widget_ops = array('classname' => 'great-featured','description' => esc_html__( "This widget displays featured pages and works only front page" ,'great') );
-            parent::__construct('great-featured', esc_html__('Great: Featured Pages','great'), $widget_ops);
+            $widget_title = sprintf( "&diams; %s &rarr; %s", __('Great','great'), __('Featured Pages','great') );
+            $widget_ops = array('classname' => 'great-featured','description' => esc_html__( "This widget displays featured pages." ,'great') );
+            parent::__construct('great-featured', esc_html($widget_title), $widget_ops);
             
     }
 
@@ -25,15 +25,29 @@ class great_featured_widget extends WP_Widget
         /**
          * Widget Content
          */
-		if ( is_home() or is_front_page() )
-			great_featured_pages ();
+		?>
+        <div class="great-widget-wrap">
+            <?php if ( get_theme_mod("featured_header") or get_theme_mod("featured_description") ): ?>
+            	<?php
+                if ( get_theme_mod("featured_header_icon") ) $i = sprintf('<i class="fa %s"></i> ', esc_attr(get_theme_mod("featured_header_icon")) );
+                else $i = "";
+                ?>
+                <div class="intro">
+                    <div class="title"><?php echo $i . esc_attr(get_theme_mod("featured_header"));?></div>
+                    <div class="desc"><?php echo esc_attr(get_theme_mod("featured_description"));?></div>
+                </div>
+            <?php endif;?>
+            <?php great_featured_pages ();?>                	
+        </div>
+        <?php
+		
 		
         echo $after_widget;
     }
 
     function form($instance) {
 		?>
-        <p><?php echo __('There are no options for this widget.','great') ?></p>
+        <p><?php echo __('Visit customizer for settings.','great') ?></p>
 		<?php
     }
 

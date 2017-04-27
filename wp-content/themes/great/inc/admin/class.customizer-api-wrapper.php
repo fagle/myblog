@@ -5,7 +5,7 @@
 	 * Also, adds custom controls for Customizer by extending it.
 	 */
 
-	class Wbls_Customizer_API_Wrapper {
+	class CeeWP_Customizer_API_Wrapper {
 
 		// Holds Panels of Customizer Options
 		// TODO: Have to test without Panels
@@ -66,26 +66,35 @@
 		 * Enqueue Scripts
 		 */
 		public function enqueue_scripts() {
+			// CSS
 			wp_enqueue_style( 
-				'great-cutomizer-css', 
+				'great-customizer-css', 
 				get_template_directory_uri() . '/inc/admin/css/customizer.css', 
 				array(), 
 				'1.0.0', 
 				'all' 
 			);
 			wp_enqueue_style( 
-				'great-font-awesome', 
+				'font-awesome', 
 				get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', 
 				array()
 			);
-			wp_enqueue_script( 
-				'customizer-js', 
-				get_template_directory_uri() . '/inc/admin/js/script.js',
-				array('jquery'),
-				$this->_version,
-				true
+			wp_enqueue_style(
+				'fontawesome-iconpicker', 
+				get_template_directory_uri() . '/inc/admin/css/fontawesome-iconpicker.min.css',
+				array()
 			);
-			wp_localize_script( 'customizer-js', 'great_upgrade', array( 'message' => __( 'Upgrade to Pro', 'great' ) ) );
+			
+			// JS
+			global $wp_scripts;
+			$ui = $wp_scripts->query('jquery-ui-slider');
+    		wp_enqueue_style('jquery-ui-smoothness', "//ajax.googleapis.com/ajax/libs/jqueryui/{$ui->ver}/themes/smoothness/jquery-ui.min.css", false, null);
+	
+			wp_enqueue_script( 
+				'fontawesome-iconpicker', 
+				get_template_directory_uri() . '/inc/admin/js/fontawesome-iconpicker.min.js',
+				array('jquery'), '2.3.0', true
+			);
 		}
 
 		/**
@@ -246,8 +255,25 @@
 					);
 					break;
 				case 'list-pages':
+					$page_list = array( 'great_hide_this' => sprintf( '&rArr; [ %1$s ]', __('Hide', 'great') ) );
+					foreach ( get_pages() as $page ) $page_list [$page->ID] = $page->post_title;
+		
 					$wp_customize->add_control( 
-						new Wbls_Customize_Select_Control_List_Pages( 
+						new CeeWP_Customize_Select_Control_List_Pages( 
+							$wp_customize, 
+							$field_id, 
+							array(
+								'label' => isset($label) ? $label : '',
+								'setting' => $field_id,
+								'section' => $this->_section_id,
+								'choices' => $page_list,
+							)
+						)
+					);
+					break;
+				case 'rangeslider':
+					$wp_customize->add_control( 
+						new CeeWP_Customize_Rangeslider_Control( 
 							$wp_customize, 
 							$field_id, 
 							array(
@@ -261,7 +287,7 @@
 					break;
 				case 'disabled-select':
 					$wp_customize->add_control( 
-						new Wbls_Customize_Disabled_Select_Control( 
+						new CeeWP_Customize_Disabled_Select_Control( 
 							$wp_customize, 
 							$field_id, 
 							array(
@@ -275,7 +301,33 @@
 					break;
 				case 'disabled-checkbox':
 					$wp_customize->add_control( 
-						new Wbls_Customize_Disabled_Checkbox_Control( 
+						new CeeWP_Customize_Disabled_Checkbox_Control( 
+							$wp_customize, 
+							$field_id, 
+							array(
+								'label' => isset($label) ? $label : '',
+								'setting' => $field_id,
+								'section' => $this->_section_id,
+							)
+						)
+					);
+					break;
+				case 'fa':
+					$wp_customize->add_control( 
+						new CeeWP_Customize_FontAwesome_Control ( 
+							$wp_customize, 
+							$field_id, 
+							array(
+								'label' => isset($label) ? $label : '',
+								'setting' => $field_id,
+								'section' => $this->_section_id,
+							)
+						)
+					);
+					break;
+				case 'disabled-text':
+					$wp_customize->add_control( 
+						new CeeWP_Customize_Disabled_Text_Control( 
 							$wp_customize, 
 							$field_id, 
 							array(
@@ -288,7 +340,7 @@
 					break;
 				case 'sep-title':
 					$wp_customize->add_control( 
-						new Wbls_Customize_sep_title( 
+						new CeeWP_Customize_sep_title( 
 							$wp_customize, 
 							$field_id, 
 							array(
@@ -301,7 +353,7 @@
 					break;
 				case 'info':
 					$wp_customize->add_control( 
-						new Wbls_Customize_Info( 
+						new CeeWP_Customize_Info( 
 							$wp_customize, 
 							$field_id, 
 							array(
@@ -315,7 +367,7 @@
 					break;
 				case 'externallinks':
 					$wp_customize->add_control( 
-						new Wbls_Customize_ExternalLinks( 
+						new CeeWP_Customize_ExternalLinks( 
 							$wp_customize, 
 							$field_id, 
 							array(

@@ -6,9 +6,9 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() and get_theme_mod('enable_fih_posts' , 1 ) ):?> 
+	<?php if ( has_post_thumbnail() and get_theme_mod('enable_fih_posts' , 1 ) ):?>
 	<div class="post-entry-media">
-    	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_post_thumbnail();?></a>
+    	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_post_thumbnail('great-image-header');?></a>
     </div>
     <?php endif;?> 
 

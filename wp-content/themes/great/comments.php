@@ -36,8 +36,8 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'great' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'great' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'great' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( '<i class="fa fa-arrow-left"></i> '. __( 'Older Comments', 'great' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'great' ) . ' <i class="fa fa-arrow-right"></i>' ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
@@ -57,8 +57,8 @@ if ( post_password_required() ) {
 			<h2 class="screen-reader-text"><?php _e( 'Comment navigation', 'great' ); ?></h2>
 			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'great' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'great' ) ); ?></div>
+				<div class="nav-previous"><?php previous_comments_link( '<i class="fa fa-arrow-left"></i> '. __( 'Older Comments', 'great' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'great' ) . ' <i class="fa fa-arrow-right"></i>' ); ?></div>
 
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
@@ -80,15 +80,16 @@ $commenter = wp_get_current_commenter();
 $req = get_option( 'require_name_email' );
 $aria_req = ( $req ? " aria-required='true'" : '' );
 $fields =  array(
-	'author' => '<div class="input-container"><input id="author" type="text" aria-required="true" tabindex="1" size="22" value="'.esc_attr($commenter['comment_author']).'" name="author" '.$aria_req.' autocomplete="off" /><span>'.__('Name', 'great').' '.($req?'*':'').'</span></div>',
-	'email' => '<div class="input-container"><input id="email" type="text" aria-required="true" tabindex="2" size="22" value="'.esc_attr($commenter['comment_author_email']).'" name="email" '.$aria_req.' autocomplete="off" /><span>'.__('Email', 'great').' '.($req?'*':'').'</span></div>',
-	'url' => '<div class="input-container"><input id="url" type="text" aria-required="true" tabindex="3" size="22" value="'.esc_url($commenter['comment_author_url']).'" name="url" autocomplete="off" /><span>'.__('Website', 'great').'</span></div>'
+	'author' => '<div class="input-container"><input id="author" type="text" aria-required="true" tabindex="1" size="22" value="'.esc_attr($commenter['comment_author']).'" name="author" '.$aria_req.' autocomplete="off" /><span><i class="fa fa-user-o"></i> '.__('Name', 'great').' '.($req?'*':'').'</span></div>',
+	'email' => '<div class="input-container"><input id="email" type="text" aria-required="true" tabindex="2" size="22" value="'.esc_attr($commenter['comment_author_email']).'" name="email" '.$aria_req.' autocomplete="off" /><span><i class="fa fa-envelope-o"></i> '.__('Email', 'great').' '.($req?'*':'').'</span></div>',
+	'url' => '<div class="input-container"><input id="url" type="text" aria-required="true" tabindex="3" size="22" value="'.esc_url($commenter['comment_author_url']).'" name="url" autocomplete="off" /><span><i class="fa fa-link"></i> '.__('Website', 'great').'</span></div>'
 );
 $comments_args = array(
-	'comment_notes_before' => '',
-	'comment_notes_after'  => '',
+	'comment_notes_before' => '<!-- Comment Guidelines -->',
+	// change the title of send button
+	'label_submit' => __( 'Post Comment','great' ),
     'fields' =>  $fields,
-	'comment_field'        => '<div class="input-container-full"><textarea id="comment" tabindex="4" rows="5" cols="58" name="comment" autocomplete="off" /></textarea></div><div class="input-container-full"><button class="button" type="submit">'.__( 'Post Comment','great' ).'</button></div>',
+	'comment_field'        => '<div class="input-container-full"><textarea id="comment" placeholder="'.__('Comment','great').'" tabindex="4" rows="5" cols="58" name="comment" autocomplete="off" /></textarea></div>',
 	'cancel_reply_link'    => '<i class="fa fa-close"></i> '.__( 'Cancel reply','great' )
 );
 comment_form($comments_args);

@@ -19,8 +19,8 @@ get_header(); ?>
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					//get_template_part( 'content', get_post_format() );
-					great_post_box();
+					if ( get_theme_mod( 'reading_front_page', false ) == "full" ) get_template_part( 'content', get_post_format() );
+					else great_post_box();
 				?>
 				
 			<?php endwhile; ?>

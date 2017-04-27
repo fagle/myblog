@@ -4,7 +4,7 @@ if ( ! function_exists( 'great_featured_pages' ) ) :
  * display featured pages
  */
 function great_featured_pages () {?>
-<div class="featured-wrap">
+<div class="featured-wrap items">
 <?php
 for( $i = 1; $i <= 3; $i++ ) {
 	$page = get_theme_mod( 'featured_page'.$i , '' );
@@ -41,7 +41,7 @@ for( $i = 1; $i <= 3; $i++ ) {
 		?>
         
         <div class="item-wrap">
-        	<div class="image">
+        	<div class="image" style="background-image:url(<?php echo esc_url( $image ); ?>);">
             	<a href="<?php echo esc_url( $link ); ?>">
                 <img alt="<?php echo esc_attr( $title ); ?>" src="<?php echo esc_url( $image ); ?>" />
                 </a>
@@ -55,11 +55,13 @@ for( $i = 1; $i <= 3; $i++ ) {
             	<?php echo wp_kses_post($text);?>
             </div>
             
+            <?php if ( esc_attr( $button_text ) != "" ): ?>
             <div class="button">
             	<a style="background:<?php echo esc_attr($button_bg);?>; color:<?php echo esc_attr($button_color);?>;"
                 href="<?php echo esc_url( $link ); ?>">
 				<?php echo esc_attr( $button_text );?></a>
             </div>
+            <?php endif;?>
         </div><!-- .item-wrap-->
 	<?php
 	endif;		

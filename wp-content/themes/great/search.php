@@ -26,7 +26,11 @@ get_header(); ?>
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'content', 'search' );
+				if (  get_theme_mod( 'reading_search', 'summary' ) == 'summary' ) {
+					great_post_box();
+				} else {
+					get_template_part( 'content', get_post_format() );
+				}
 				?>
 
 			<?php endwhile; ?>

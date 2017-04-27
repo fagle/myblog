@@ -13,8 +13,6 @@ if ( ! function_exists( 'great_posted_on' ) ) :
  * Prints HTML with meta information for the current post-date/time and author.
  */
 function great_posted_on() {
-	// Edit
-	edit_post_link( __( 'Edit', 'great' ), '<span class="edit-link"><i class="fa fa-edit"></i> ', '</span>' );
 	// Show Hide?
 	if ( get_theme_mod( 'display_post_date', 1 ) ):
 	// Output
@@ -40,6 +38,8 @@ function great_posted_on() {
 		comments_popup_link( __( 'Leave a comment', 'great' ), __( '1 Comment', 'great' ), __( '% Comments', 'great' ) );
 		echo '</span>';
 	}
+	// Edit
+	edit_post_link( __( 'Edit', 'great' ), '<span class="edit-link"><i class="fa fa-edit"></i> ', '</span>' );
 }
 endif;
 
@@ -237,6 +237,57 @@ function great_theme_comment($comment,$args,$depth){
 	}
 }
 
+/**
+ * Comment form : button.
+ */
+function great_comment_form_submit_button ( $submit_button, $args ){
+    // Override the submit button HTML:
+    $button = '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s <i class="fa fa-paper-plane"></i></button>';
+    return sprintf(
+        $button,
+        esc_attr( $args['name_submit'] ),
+        esc_attr( $args['id_submit'] ),
+        esc_attr( $args['class_submit'] ),
+        esc_attr( $args['label_submit'] )
+     );
+}
+add_filter( 'comment_form_submit_button', 'great_comment_form_submit_button', 10, 2 );
+
+/* Great: Header menu */
+function great_header_menu () {?>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'container_class' => 'primary-menu-cont', 'fallback_cb' => 'great_header_menu_fb'  ) ); ?>
+        <div class="clear"></div>
+    </nav><!-- #site-navigation -->
+<?php
+}
+function great_header_menu_fb () {
+	wp_page_menu( array('menu_class'  => 'primary-menu-cont') );
+}
+
+// end of header menu
+
+
+/* Classes to font awesome icons */
+if( !is_admin() ) add_filter( 'wp_get_nav_menu_items', 'great_menu_fa_icons', 10, 3 );
+function great_menu_fa_icons( $items, $menu, $args ) {
+	foreach( $items as $k => $item )
+		if ( !empty($item->classes) ) {
+			foreach( $item->classes as $key => $class ) {
+				// match .fa
+				if ( $class == 'fa' ) unset( $items[$k]->classes[$key] );
+				// match .fa-*
+				$fa_class  = preg_match ("/fa-./", $class);
+				if ( $fa_class ) {
+					unset( $items[$k]->classes[$key] );
+					$items[$k]->title = sprintf('<i class="fa %1$s menu-icon"></i> %2$s', esc_attr($class), $items[$k]->title);
+				}
+			}
+		}
+    return $items;
+}
+
+/* great_posts_navigation  */
 function great_posts_navigation(){
 	if(function_exists('wp_pagenavi')) {
 		wp_pagenavi();
@@ -284,9 +335,8 @@ function great_post_box () { ?>
     <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_post_thumbnail('thumbnail');?></a>
     <?php endif;?> 
     
-    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title( '<span class="entry-title">', '</span>' ); ?></a>
-    <br />
-    <span class="post-box-date">
+    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title( '<h3 class="entry-title">', '</h3>' ); ?></a>
+    <span class="post-box-meta entry-meta">
     	<?php great_posted_on(); ?>
     </span>
     <br />

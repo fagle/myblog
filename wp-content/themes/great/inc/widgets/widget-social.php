@@ -7,9 +7,9 @@
 class great_social_widget extends WP_Widget
 {
 	 function great_social_widget(){
-            
-            $widget_ops = array('classname' => 'great-social','description' => esc_html__( "It's displays social media icons on your any sidebar" ,'great') );
-            parent::__construct('great-social', esc_html__('Great: Social Widget','great'), $widget_ops);
+            $widget_title = sprintf( "&diams; %s &rarr; %s", __('Great','great'), __('Social','great') );
+            $widget_ops = array('classname' => 'great-social','description' => esc_html__( "This widget displays your social media icons." ,'great') );
+            parent::__construct('great-social', esc_html($widget_title), $widget_ops);
             
     }
 
@@ -46,7 +46,9 @@ class great_social_widget extends WP_Widget
                           name="<?php echo $this->get_field_name('title'); ?>"
                           id="<?php $this->get_field_id('title'); ?>"
                           class="widefat" />
-      </p><?php
+      </p>
+	  <p><?php echo __('Visit customizer for settings.','great') ?></p>
+	  <?php
     }
 
 }

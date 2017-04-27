@@ -13,10 +13,13 @@
  */
 function great_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	// Remove unused site description (tagline).
+	//$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->remove_control('blogdescription');
+	
+	// Layout
+	$wp_customize->get_setting( 'site_size_percent' )->transport = 'postMessage';
 }
 add_action( 'customize_register', 'great_customize_register' );
 
@@ -24,6 +27,14 @@ add_action( 'customize_register', 'great_customize_register' );
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function great_customize_preview_js() {
-	wp_enqueue_script( 'great-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'great-customizer', get_template_directory_uri() . '/inc/admin/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'great_customize_preview_js' );
+
+/**
+ * Enqueue script for custom customize control.
+ */
+function great_customize_enqueue() {
+	wp_enqueue_script( 'great-customizer', get_template_directory_uri() . '/inc/admin/js/customize-control.js', array( 'jquery', 'customize-controls', 'jquery-ui-slider' ), false, true );
+}
+add_action( 'customize_controls_enqueue_scripts', 'great_customize_enqueue' );

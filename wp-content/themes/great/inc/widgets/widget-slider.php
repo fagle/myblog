@@ -7,9 +7,9 @@
 class great_slider_widget extends WP_Widget
 {
 	 function great_slider_widget(){
-            
+            $widget_title = sprintf( "&diams; %s &rarr; %s", __('Great','great'), __('Slider','great') );
             $widget_ops = array('classname' => 'great-slider','description' => esc_html__( "Its shows the Great theme slider and works only front page" ,'great') );
-            parent::__construct('great-slider', esc_html__('Great: Slider','great'), $widget_ops);
+            parent::__construct('great-slider', esc_html($widget_title), $widget_ops);
             
     }
 
@@ -25,15 +25,14 @@ class great_slider_widget extends WP_Widget
         /**
          * Widget Content
          */
-		if ( is_home() or is_front_page() )
-			great_slider();
+		great_slider();
 		
         echo $after_widget;
     }
 
     function form($instance) {
 		?>
-        <p><?php echo __('There are no options for this widget.','great') ?></p>
+        <p><?php echo __('Visit customizer for settings.','great') ?></p>
 		<?php
     }
 

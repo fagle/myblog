@@ -18,6 +18,17 @@
 	padding-right:10px;
 	color:#666;
 }
+/* jQuery UI Slider > custom handle for range field */
+.customize-control-rangeslider div.range-slider {
+	width:95%;
+}
+.ui-slider-handle {
+	width: auto !important;
+	height: auto !important;
+	text-align: center;
+	line-height: 1em;
+	padding: 2px;
+}
 /**/
 .wrap .buy-pro, .wrap .description.customize-section-description a {
 	background: #00c1cf;
@@ -38,6 +49,9 @@
 	font-size:18px;
 	padding-right:10px;
 	color:#09F;
+}
+.customize-sep-title.info:before {
+	content:"\f05a ";
 }
 .accordion-section-content .alvele {
 	display:block;
@@ -83,4 +97,28 @@ a.promote-site {
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
+}
+/* FA icon picker */
+.fa-icp {
+	display:block;
+	background:#FFF;
+	border:#CCC 1px solid;
+	border-radius:4px;
+}
+.fa-icp > input {
+	float:left;
+	width:80% !important;
+}
+.fa-icp > span {
+	width:10%;
+	font-size: 2em;
+	padding-left: 8px;
+	text-align:center;
+}
+.iconpicker-popover {
+	z-index:9999;
+}
+.iconpicker-popover .popover-content {
+	box-shadow: 1px 1px 2px 3px #CCC;
+	z-index: 9999;
 }

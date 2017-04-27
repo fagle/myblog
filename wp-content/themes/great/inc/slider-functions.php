@@ -21,10 +21,16 @@ function great_slider() { ?>
 					
 					$great_slider_title = esc_attr( $post->post_title );
 					
-					// Slider url
-					$great_slider_link = get_theme_mod( 'slider_link'.$i , false );
-					if ( $great_slider_link == '' or $great_slider_link == false )
-						$great_slider_link = get_permalink( $post->ID );
+					// Slide Icon
+					
+					$icon = "";
+					if ( get_theme_mod( 'slide_icon'.$i, false ) )
+						$icon = sprintf('<i class="fa %s"></i> ', esc_attr(get_theme_mod( 'slide_icon'.$i )) );
+					
+					// Slide url
+					$great_slide_link = get_theme_mod( 'slide_link'.$i , false );
+					if ( $great_slide_link == '' or $great_slide_link == false )
+						$great_slide_link = get_permalink( $post->ID );
 						
 					// Get post fetured image
 					$great_slider_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
@@ -41,7 +47,7 @@ function great_slider() { ?>
 						$classes = "slides displaynone"; }?>
 					<section id="featured-slider" class="<?php echo $classes; ?>">
 						<figure class="slider-image-wrap">
-                        	<a href="<?php echo esc_url( $great_slider_link ); ?>">
+                        	<a href="<?php echo esc_url( $great_slide_link ); ?>">
 							<img alt="<?php echo esc_attr( $great_slider_title ); ?>" src="<?php echo esc_url( $great_slider_image ); ?>" />
                             </a>
 					    </figure>
@@ -50,7 +56,7 @@ function great_slider() { ?>
 					    		<div class="inner-wrap">
 						    		<div class="slider-text-wrap <?php echo $class_text;?>">
 						    			<?php if( !empty( $great_slider_title )  ) { ?>
-							     			<span id="slider-title" class="clearfix"><a title="<?php echo esc_attr( $great_slider_title ); ?>" href="<?php echo esc_url( $great_slider_link ); ?>"><?php echo esc_html( $great_slider_title ); ?></a></span>
+							     			<span id="slider-title" class="clearfix"><a title="<?php echo esc_attr( $great_slider_title ); ?>" href="<?php echo esc_url( $great_slide_link ); ?>"><?php echo $icon . esc_html( $great_slider_title ); ?></a></span>
 							     		<?php } ?>
 							     		<?php if( !empty( $great_slider_text )  ) { ?>
 							     			<span id="slider-content"><?php echo wp_kses_post( $great_slider_text ); ?></span>

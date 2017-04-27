@@ -1,11 +1,8 @@
 (function($){
 	jQuery(document).ready(function($){
-		// Main Menu
-		$("#site-navigation > div > ul").addClass( "nav-menu" );
-		
 		// Clone main menu for Responsive menu
-		$( "#primary-menu" ).clone().prependTo( "#responsive-menu" );
-		
+		$( ".primary-menu-cont" ).clone().prependTo( "#responsive-menu" );
+		$("#responsive-menu .primary-menu-cont").removeClass( "primary-menu-cont" );
 		// Current Item
 		var current = $("#site-navigation .current-menu-item > a").text();
 		if (current) $(".responsive-menu-bar span").text( current );
@@ -19,19 +16,71 @@
 		});
 				
 		// Main menu underline
-		$(".nav-menu > li > ul.children").parent( "li" ).addClass( "main-menu-dd" );
-		$(".nav-menu > li > ul.sub-menu").parent( "li" ).addClass( "main-menu-dd" );
+		$(".primary-menu-cont > ul > li > ul.children").parent( "li" ).addClass( "main-menu-dd" );
+		$(".primary-menu-cont > ul > li > ul.sub-menu").parent( "li" ).addClass( "main-menu-dd" );
 		
-		$(".nav-menu > li > a").append("<span></span>");
-		$(".nav-menu > li > a").mouseover(function(){
-			$("span", this).slideDown(100);
+		$(".primary-menu-cont > ul > li > a").append('<span class="underline"></span>');
+		$(".primary-menu-cont > ul > li > a").mouseover(function(){
+			$(".underline", this).slideDown(100);
 		}).mouseout(function() {
-			$("span", this).slideUp(100);
+			$(".underline", this).slideUp(100);
      	});
 		
+		// Current Menu item
+		//$(".primary-menu-cont ul > li > a > .underline").slideUp(100);
+		
 		// Submenus
-		$(".nav-menu li li.page_item_has_children > a").append('<i class="fa fa-arrow-right"></i>');
-		$(".nav-menu li li.menu-item-has-children > a").append('<i class="fa fa-arrow-right"></i>');
+		$(".primary-menu-cont ul li li.page_item_has_children > a").append('<i class="fa fa-arrow-right"></i>');
+		$(".primary-menu-cont ul li li.menu-item-has-children > a").append('<i class="fa fa-arrow-right"></i>');
+		
+		// Brings drop-down navigation tapping for touch devices.
+		$('.main-navigation').doubleTapToGo();
+		
+		// Mainmenu + Slider fix.
+		if ( $( ".main-navigation" ).length ) {
+			$("#content aside.widget:first-of-type .site-slider").css("margin-top", "auto");
+		}
+		
+		// Clients : OWL carousel
+		$(".owl-clients").owlCarousel({
+			loop:true,
+			autoplay: true,
+			margin:10,
+			responsive : {
+				// breakpoint from 0 up
+				0 : {
+					items:1,
+				},
+				// breakpoint from 320 up
+				321 : {
+					items:2,
+				},
+				// breakpoint from 480 up
+				480 : {
+					items:4,
+				}
+			}
+		});
+		// Blog : OWL carousel
+		$(".owl-blog").owlCarousel({
+			loop:true,
+			autoplay: true,
+			margin:15,
+			responsive : {
+				// breakpoint from 0 up
+				0 : {
+					items:1,
+				},
+				// breakpoint from 320 up
+				321 : {
+					items:2,
+				},
+				// breakpoint from 480 up
+				480 : {
+					items:3,
+				}
+			}
+		});
 		
 		// Back to Top
 		jQuery('#back_top').click(function(){

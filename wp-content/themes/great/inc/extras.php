@@ -26,41 +26,15 @@ add_filter( 'body_class', 'great_body_classes' );
 
 // Great theme excerpt Lenght & More Filter
 function great_excerpt_length( $length ) {
-	return 600;
+	$l = esc_attr(get_theme_mod( 'excerpt_size', 35));
+	if ($l>=0) return $l;
+	else return 35;
 }
 function great_excerpt_more( $more ) {
-	return '...';
+	return esc_attr(get_theme_mod( 'excerpt_more', '...'));	
 }
-//function great_trim_excerpt( $text, $raw_excerpt ) {
-//	$text = get_the_content('');
-//
-//	$text = strip_shortcodes( $text );
-//
-//	/** This filter is documented in wp-includes/post-template.php */
-//	$text = apply_filters( 'the_content', $text );
-//	$text = str_replace(']]>', ']]&gt;', $text);
-//
-//	/**
-//	 * Filter the number of words in an excerpt.
-//	 *
-//	 * @since 2.7.0
-//	 *
-//	 * @param int $number The number of words. Default 55.
-//	 */
-//	$excerpt_length = apply_filters( 'excerpt_length', 55 );
-//	/**
-//	 * Filter the string in the "more" link displayed after a trimmed excerpt.
-//	 *
-//	 * @since 2.9.0
-//	 *
-//	 * @param string $more_string The string shown within the more link.
-//	 */
-//	$text = mb_substr($text, 0, $excerpt_length);
-//	return $text;
-//}
 add_filter( 'excerpt_more', 'great_excerpt_more' );
 add_filter( 'excerpt_length', 'great_excerpt_length', 999 );
-//add_filter( 'wp_trim_excerpt', 'great_trim_excerpt', 10, 2);
 
 //
 //if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
@@ -143,23 +117,28 @@ function great_social_media( $position = "header" ) {
 // Quote
 function great_footer_quote() {
 	// Vars
+	$b = esc_html(get_theme_mod( 'footer_quote_title'));
 	$q = esc_html(get_theme_mod( 'footer_quote', '"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."'));
 	$a = esc_html(get_theme_mod( 'footer_author', 'Dolor sit Amet'));
 	$l = esc_url(get_theme_mod( 'footer_link', esc_url( home_url( '/' ) ) ));
 	$t = esc_html(get_theme_mod( 'footer_linktext', __('Read more...', 'great') ));
+	$i = esc_attr(get_theme_mod( 'footer_link_icon', 'fa-arrow-circle-right'));
+	$i = sprintf('<i class="fa %s"></i>', $i);
 	
 	// Link
 	$link = '';
 	if ( trim($l) != '' or trim($t) != '' ) 
-		$link = sprintf('<a class="more-link" href="%1$s">%2$s</a>', $l, $t);
+		$link = sprintf('<a class="more-link" href="%1$s">%2$s %3$s</a>', $l, $i, $t);
+
+	// Check the Quote Rows
+	$quote = '';
+	if (!empty($b)) $quote .= sprintf('<div class="b">%s</div>', $b);
+	if (!empty($q)) $quote .= sprintf('<div class="q">%s</div>', $q);
+	if (!empty($a)) $quote .= sprintf('<div class="a">%s</div>', $a);
+	if (!empty($l)) $quote .= sprintf('<div class="l">%s</div>', $link);
+	
 	// Display Quote
-	if ( trim($q) != '' )
-		printf('
-		<div class="quote">
-			<div class="t">%1$s</div>
-			<div class="a">%2$s</div>
-			<div class="l">%3$s</div>
-		</div>', $q, $a, $link);
+	if ( !empty($quote) ) printf('<div class="quote">%s</div>', $quote);
 }
 //
 // Contact
@@ -235,9 +214,15 @@ function great_wp_footer () { ?>
         <?php great_social_media( "footer" );?>
         <div class="clear"></div>
         
+        <!-- Footer Menu -->
+        <?php if ( has_nav_menu( 'footer-menu' ) ) : ?>
+        <div id="footer-menu"><?php wp_nav_menu( array( 'theme_location'   => 'footer-menu',	'depth' => 1 ) ); ?></div>
+        <?php endif; ?>
+        
         <div class="site-info">
 		<div class="info-text"><?php echo esc_attr(get_theme_mod( 'footer_infotext' ));?></div>
 		<?php printf( __( 'Copyright &copy; %1$d %2$s.','great' ),date('Y'),'<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>');?> <?php _e( 'Powered by WordPress', 'great' ); ?><span class="sep"> &amp; </span><?php printf(__('Author: %s', 'great' ), 'Fagle, <strong><a target="_self" href="http://nubi.me/">nubi.me</a></strong>' ); ?><span class="sep"> &amp; </span><?php printf( __( '<span>Active theme</span> %s', 'great' ), 'Great' ); ?>
+		<?php printf( __( 'Copyright &copy; %1$d %2$s.','great' ),date('Y'),'<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>');?> <?php _e( 'Powered by WordPress', 'great' ); ?><span class="sep"> &amp; </span><?php printf('%s, <strong><a target="_self" href="http://ceewp.com/">%s ceewp.com</a></strong>', 'CeeWP', __( 'Theme by','great' ) ); ?><span class="sep"> &amp; </span><?php printf( __( '<span>%s is using the Great WordPress theme</span>', 'great' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
     

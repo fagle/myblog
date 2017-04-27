@@ -1,7 +1,5 @@
 <?php
 function great_generate_array ( $req = "slider" ) {
-// FA Array
-$fa_array = array( '--- ' . __('Hide', 'great') . ' ---', "adjust", "adn", "align-center", "align-justify", "align-left", "align-right", "ambulance", "anchor", "android", "angellist", "angle-double-down", "angle-double-left", "angle-double-right", "angle-double-up", "angle-down", "angle-left", "angle-right", "angle-up", "apple", "archive", "area-chart", "arrow-circle-down", "arrow-circle-left", "arrow-circle-o-down", "arrow-circle-o-left", "arrow-circle-o-right", "arrow-circle-o-up", "arrow-circle-right", "arrow-circle-up", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "arrows", "arrows-alt", "arrows-h", "arrows-v", "asterisk", "at", "automobile", "backward", "ban", "bank", "bar-chart", "bar-chart-o", "barcode", "bars", "bed", "beer", "behance", "behance-square", "bell", "bell-o", "bell-slash", "bell-slash-o", "bicycle", "binoculars", "birthday-cake", "bitbucket", "bitbucket-square", "bitcoin", "bold", "bolt", "bomb", "book", "bookmark", "bookmark-o", "briefcase", "btc", "bug", "building", "building-o", "bullhorn", "bullseye", "bus", "buysellads", "cab", "calculator", "calendar", "calendar-o", "camera", "camera-retro", "car", "caret-down", "caret-left", "caret-right", "caret-square-o-down", "caret-square-o-left", "caret-square-o-right", "caret-square-o-up", "caret-up", "cart-arrow-down", "cart-plus", "cc", "cc-amex", "cc-discover", "cc-mastercard", "cc-paypal", "cc-stripe", "cc-visa", "certificate", "chain", "chain-broken", "check", "check-circle", "check-circle-o", "check-square", "check-square-o", "chevron-circle-down", "chevron-circle-left", "chevron-circle-right", "chevron-circle-up", "chevron-down", "chevron-left", "chevron-right", "chevron-up", "child", "circle", "circle-o", "circle-o-notch", "circle-thin", "clipboard", "clock-o", "close", "cloud", "cloud-download", "cloud-upload", "cny", "code", "code-fork", "codepen", "coffee", "cog", "cogs", "columns", "comment", "comment-o", "comments", "comments-o", "compass", "compress", "connectdevelop", "copy", "copyright", "credit-card", "crop", "crosshairs", "css3", "cube", "cubes", "cut", "cutlery", "dashboard", "dashcube", "database", "dedent", "delicious", "desktop", "deviantart", "diamond", "digg", "dollar", "dot-circle-o", "download", "dribbble", "dropbox", "drupal", "edit", "eject", "ellipsis-h", "ellipsis-v", "empire", "envelope", "envelope-o", "envelope-square", "eraser", "eur", "euro", "exchange", "exclamation", "exclamation-circle", "exclamation-triangle", "expand", "external-link", "external-link-square", "eye", "eye-slash", "eyedropper", "facebook", "facebook-f", "facebook-official", "facebook-square", "fast-backward", "fast-forward", "fax", "female", "fighter-jet", "file", "file-archive-o", "file-audio-o", "file-code-o", "file-excel-o", "file-image-o", "file-movie-o", "file-o", "file-pdf-o", "file-photo-o", "file-picture-o", "file-powerpoint-o", "file-sound-o", "file-text", "file-text-o", "file-video-o", "file-word-o", "file-zip-o", "files-o", "film", "filter", "fire", "fire-extinguisher", "flag", "flag-checkered", "flag-o", "flash", "flask", "flickr", "floppy-o", "folder", "folder-o", "folder-open", "folder-open-o", "font", "forumbee", "forward", "foursquare", "frown-o", "futbol-o", "gamepad", "gavel", "gbp", "ge", "gear", "gears", "genderless", "gift", "git", "git-square", "github", "github-alt", "github-square", "gittip", "glass", "globe", "google", "google-plus", "google-plus-square", "google-wallet", "graduation-cap", "gratipay", "group", "h-square", "hacker-news", "hand-o-down", "hand-o-left", "hand-o-right", "hand-o-up", "hdd-o", "header", "headphones", "heart", "heart-o", "heartbeat", "history", "home", "hospital-o", "hotel", "html5", "ils", "image", "inbox", "indent", "info", "info-circle", "inr", "instagram", "institution", "ioxhost", "italic", "joomla", "jpy", "jsfiddle", "key", "keyboard-o", "krw", "language", "laptop", "lastfm", "lastfm-square", "leaf", "leanpub", "legal", "lemon-o", "level-down", "level-up", "life-bouy", "life-buoy", "life-ring", "life-saver", "lightbulb-o", "line-chart", "link", "linkedin", "linkedin-square", "linux", "list", "list-alt", "list-ol", "list-ul", "location-arrow", "lock", "long-arrow-down", "long-arrow-left", "long-arrow-right", "long-arrow-up", "magic", "magnet", "mail-forward", "mail-reply", "mail-reply-all", "male", "map-marker", "mars", "mars-double", "mars-stroke", "mars-stroke-h", "mars-stroke-v", "maxcdn", "meanpath", "medium", "medkit", "meh-o", "mercury", "microphone", "microphone-slash", "minus", "minus-circle", "minus-square", "minus-square-o", "mobile", "mobile-phone", "money", "moon-o", "mortar-board", "motorcycle", "music", "navicon", "neuter", "newspaper-o", "openid", "outdent", "pagelines", "paint-brush", "paper-plane", "paper-plane-o", "paperclip", "paragraph", "paste", "pause", "paw", "paypal", "pencil", "pencil-square", "pencil-square-o", "phone", "phone-square", "photo", "picture-o", "pie-chart", "pied-piper", "pied-piper-alt", "pinterest", "pinterest-p", "pinterest-square", "plane", "play", "play-circle", "play-circle-o", "plug", "plus", "plus-circle", "plus-square", "plus-square-o", "power-off", "print", "puzzle-piece", "qq", "qrcode", "question", "question-circle", "quote-left", "quote-right", "ra", "random", "rebel", "recycle", "reddit", "reddit-square", "refresh", "remove", "renren", "reorder", "repeat", "reply", "reply-all", "retweet", "rmb", "road", "rocket", "rotate-left", "rotate-right", "rouble", "rss", "rss-square", "rub", "ruble", "rupee", "save", "scissors", "search", "search-minus", "search-plus", "sellsy", "send", "send-o", "server", "share", "share-alt", "share-alt-square", "share-square", "share-square-o", "shekel", "sheqel", "shield", "ship", "shirtsinbulk", "shopping-cart", "sign-in", "sign-out", "signal", "simplybuilt", "sitemap", "skyatlas", "skype", "slack", "sliders", "slideshare", "smile-o", "soccer-ball-o", "sort", "sort-alpha-asc", "sort-alpha-desc", "sort-amount-asc", "sort-amount-desc", "sort-asc", "sort-desc", "sort-down", "sort-numeric-asc", "sort-numeric-desc", "sort-up", "soundcloud", "space-shuttle", "spinner", "spoon", "spotify", "square", "square-o", "stack-exchange", "stack-overflow", "star", "star-half", "star-half-empty", "star-half-full", "star-half-o", "star-o", "steam", "steam-square", "step-backward", "step-forward", "stethoscope", "stop", "street-view", "strikethrough", "stumbleupon", "stumbleupon-circle", "subscript", "subway", "suitcase", "sun-o", "superscript", "support", "table", "tablet", "tachometer", "tag", "tags", "tasks", "taxi", "tencent-weibo", "terminal", "text-height", "text-width", "th", "th-large", "th-list", "thumb-tack", "thumbs-down", "thumbs-o-down", "thumbs-o-up", "thumbs-up", "ticket", "times", "times-circle", "times-circle-o", "tint", "toggle-down", "toggle-left", "toggle-off", "toggle-on", "toggle-right", "toggle-up", "train", "transgender", "transgender-alt", "trash", "trash-o", "tree", "trello", "trophy", "truck", "try", "tty", "tumblr", "tumblr-square", "turkish-lira", "twitch", "twitter", "twitter-square", "umbrella", "underline", "undo", "university", "unlink", "unlock", "unlock-alt", "unsorted", "upload", "usd", "user", "user-md", "user-plus", "user-secret", "user-times", "users", "venus", "venus-double", "venus-mars", "viacoin", "video-camera", "vimeo-square", "vine", "vk", "volume-down", "volume-off", "volume-up", "warning", "wechat", "weibo", "weixin", "whatsapp", "wheelchair", "wifi", "windows", "won", "wordpress", "wrench", "xing", "xing-square", "yahoo", "yelp", "yen", "youtube", "youtube-play", "youtube-square");
 // Disabled-numbers Array
 $qty = array( '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5', '6' => '6', '7' => '7', '8' => '8', '9' => '9', '10' => '10', '11' => '11', '12' => '12', '13' => '13', '14' => '14', '15' => '15', '16' => '16', '17' => '17', '18' => '18', '19' => '19', '20' => '20', '21' => '21', '22' => '22', '23' => '23', '24' => '24', '25' => '25', '26' => '26', '27' => '27', '28' => '28', '29' => '29', '30' => '30',  );
 
@@ -13,8 +11,8 @@ $pages = get_pages();
 		$page_list [$page->ID] = $page->post_title;
 // Slider Array
 $great_slider_array = array(
-							'sep' => array(
-								'label' => __("First, please enable 'slider' widget.", 'great'),
+							'sep_slider' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Slider", 'great')),
                                 'type' => 'info',
 								'desc' => "<a href='http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme/' target='_blank'>How to add widgets?</a>",
                             ),
@@ -24,18 +22,58 @@ $great_slider_array = array(
                                 'default' => 0,
                                 'sanitize_callback' => 'great_boolean',
                             ),
-							/*'slider_quantity' => array(
+							'slider_style' => array(
                                 'type' => 'disabled-select',
-                                'label' => __('Quantity', 'great'),
-                                'default' => 4,
-								'choices' => $qty,
+                                'label' => __('Style', 'great'),
+                                'default' => 1,
+								'choices' => array( '1' => '1', '2' => '2', '3' => '3', '4' => '4', '5' => '5' ),
                                 'sanitize_callback' => 'absint',
-                            ),*/
+                            ),
+							'slider_effect' => array(
+                                'type' => 'disabled-select',
+                                'label' => __('Effect', 'great'),
+                                'default' => "fade",
+								'choices' => array(
+													"none" => __("None", "great"),
+													"blindX" => __("Blind X", "great"),
+													"blindY" => __("Blind Y", "great"),
+													"blindZ" => __("Blind Z", "great"),
+													"cover" => __("Cover", "great"),
+													"curtainX" => __("Curtain X", "great"),
+													"curtainY" => __("Curtain Y", "great"),
+													"fade" => __("Fade", "great"),
+													"scrollUp" => __("Scroll Up", "great"),
+													"scrollDown" => __("Scroll Down", "great"),
+													"scrollLeft" => __("Scroll Left", "great"),
+													"scrollRight" => __("Scroll Right", "great"),
+													"shuffle" => __("Shuffle", "great"),
+													"toss" => __("Toss", "great"),
+													"turnUp" => __("Turn Up", "great"),
+													"turnDown" => __("Turn Down", "great"),
+													"turnLeft" => __("Turn Left", "great"),
+													"turnRight" => __("Turn Right", "great"),
+													"uncover" => __("Uncover", "great"),
+													"wipe" => __("Wipe", "great"),
+								),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'slider_timeout' => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Time-out', 'great'),
+								'default' => 3000,
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'slider_speed' => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Speed', 'great'),
+								'default' => 1000,
+                                'sanitize_callback' => 'esc_attr',
+                            )
 							);
 for ($i=1;$i<=10;$i++) {
 	$great_slider_item = array();
 	$great_slider_item = array(							
-							'sep'.$i => array(
+							'sep_slider'.$i => array(
 								'label' => __("Slider", 'great') . "#$i",
                                 'type' => 'sep-title',
                             ),
@@ -46,7 +84,13 @@ for ($i=1;$i<=10;$i++) {
 								'choices' => $page_list ,
                                 'sanitize_callback' => 'absint',
                             ),
-							'slider_link'.$i => array(
+							'slide_icon'.$i => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'slide_link'.$i => array(
                                 'type' => 'text',
                                 'label' => __('Custom Link', 'great'),
                                 'sanitize_callback' => 'esc_url',
@@ -56,25 +100,265 @@ for ($i=1;$i<=10;$i++) {
 }
 if ( $req == "slider" ) return $great_slider_array;
 
-// Featured Pages Array
-$great_featured_array = array(
-							'sep_info' => array(
-								'label' => __("First, please enable 'Featured Pages' widget.", 'great'),
+
+// Services Array
+$great_services_array = array(
+							'sep_info_services' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Services", 'great')),
                                 'type' => 'info',
 								'desc' => "<a href='http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme/' target='_blank'>How to add widgets?</a>",
                             ),
-							/*'slider_quantity' => array(
-                                'type' => 'disabled-select',
-                                'label' => __('Quantity', 'great'),
-                                'default' => 4,
-								'choices' => $qty,
-                                'sanitize_callback' => 'absint',
-                            ),*/
+							'sep_info_hint_services' => array(
+								'label' => __("Hint", 'great'),
+                                'type' => 'info',
+								'desc' => __("If you want to hide the icon, set the icon field as empty.", 'great'),
+                            ),
+							'sep_services_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'services_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'services_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'services_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),							
+							);
+for ($i=1;$i<=3;$i++) {
+	$great_services_item = array();
+	$great_services_item = array(							
+							'sep_service'.$i => array(
+								'label' => __("Service", 'great') . " #$i",
+                                'type' => 'sep-title',
+                            ),
+							'service_icon'.$i => array(
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+								'default' => 'fa-star',
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'service_icon_color'.$i => array(
+                                'type' => 'color',
+                                'label' => __('Color', 'great'),
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'service_title'.$i => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'service_description'.$i => array(
+                                'type' => 'text',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'service_link'.$i => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Custom Link', 'great'),
+                                'sanitize_callback' => 'esc_url',
+                            ),
+							'service_link_target'.$i => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Open link in a new window/tab', 'great'),
+                                'default' => 0,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							);
+	$great_services_array = array_merge($great_services_array, $great_services_item);
+}
+if ( $req == "services" ) return $great_services_array;
+
+
+
+// Projects Array
+$great_projects_array = array(
+							'sep_info_projects' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Projects", 'great')),
+                                'type' => 'info',
+								'desc' => '<a href="http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme" target="_blank">How to add widgets?</a>',
+                            ),
+							'sep_info_projects_is' => array(
+								'label' => sprintf( "%1s (%2s)", __('Suggested image dimensions:', 'great'), '300 x 150' ),
+                                'type' => 'info',
+								'desc' => '',
+                            ),
+							'sep_projects_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'projects_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'projects_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'projects_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),							
+							);
+for ($i=1;$i<=3;$i++) {
+	$great_projects_item = array();
+	$great_projects_item = array(							
+							'sep_project'.$i => array(
+								'label' => __("Project", 'great') . " #$i",
+                                'type' => 'sep-title',
+                            ),
+							'project_image'.$i => array(
+								'default' => '',
+                                'type' => 'image',
+                                'label' => __('Image', 'great'),
+                                'sanitize_callback' => 'esc_url_raw',
+                            ),
+							'project_color'.$i => array(
+                                'type' => 'color',
+                                'label' => __('Color', 'great'),
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'project_title'.$i => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'project_description'.$i => array(
+                                'type' => 'text',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'project_link'.$i => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Custom Link', 'great'),
+                                'sanitize_callback' => 'esc_url',
+                            ),
+							'project_link_target'.$i => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Open link in a new window/tab', 'great'),
+                                'default' => 0,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							);
+	$great_projects_array = array_merge($great_projects_array, $great_projects_item);
+}
+if ( $req == "projects" ) return $great_projects_array;
+
+
+// Clients Array
+$great_clients_array = array(
+							'sep_info_clients' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Clients", 'great')),
+                                'type' => 'info',
+								'desc' => '<a href="http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme" target="_blank">How to add widgets?</a>',
+                            ),
+							'sep_info_clients_is' => array(
+								'label' => sprintf( "%1s (%2s)", __('Suggested image dimensions:', 'great'), '300 x 100' ),
+                                'type' => 'info',
+								'desc' => '',
+                            ),
+							
+							'sep_clients_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'clients_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'clients_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'clients_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),							
+							);
+for ($i=1;$i<=15;$i++) {
+	$great_clients_item = array();
+	$great_clients_item = array(							
+							'sep_clients'.$i => array(
+								'label' => __("Client", 'great') . " #$i",
+                                'type' => 'sep-title',
+                            ),
+							'client_logo'.$i => array(
+								'default' => '',
+                                'type' => 'image',
+                                'label' => __('Logo', 'great'),
+                                'sanitize_callback' => 'esc_url_raw',
+                            ),
+							'client_title'.$i => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'client_link'.$i => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Custom Link', 'great'),
+                                'sanitize_callback' => 'esc_url',
+                            ),
+							'client_link_target'.$i => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Open link in a new window/tab', 'great'),
+                                'default' => 0,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							);
+	$great_clients_array = array_merge($great_clients_array, $great_clients_item);
+}
+if ( $req == "clients" ) return $great_clients_array;
+
+
+// Featured Pages Array
+$great_featured_array = array(
+							'sep_featured_info' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Featured Pages", 'great')),
+                                'type' => 'info',
+								'desc' => "<a href='http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme/' target='_blank'>How to add widgets?</a>",
+                            ),
+							'sep_featured_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'featured_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'featured_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'featured_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            )
 							);
 for ($i=1;$i<=3;$i++) {
 	$great_featured_item = array();
 	$great_featured_item = array(							
-							'sep'.$i => array(
+							'sep_featured'.$i => array(
 								'label' => __("Page", 'great') . " #$i",
                                 'type' => 'sep-title',
                             ),
@@ -84,6 +368,12 @@ for ($i=1;$i<=3;$i++) {
                                 'default' => 'great_hide_this',
 								'choices' => $page_list ,
                                 'sanitize_callback' => 'absint',
+                            ),
+							'featured_hide_title'.$i => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Page title', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
                             ),
 							'featured_alternative_text'.$i => array(
                                 'type' => 'text',
@@ -120,6 +410,11 @@ if ( $req == "featured-page" ) return $great_featured_array;
 
 // Socail Media Array
 $great_social_array = array(
+							'sep_info_social' => array(
+								'label' => __("Hint", 'great'),
+                                'type' => 'info',
+								'desc' => __("If you want to hide the icon, set the icon field as empty.", 'great'),
+                            ),
 							'sep_sm_header' => array(
 								'label' => __("Header", 'great'),
                                 'type' => 'sep-title',
@@ -169,7 +464,7 @@ $great_social_array = array(
                             ),
 							//_________
 							'sep_sm_widget' => array(
-								'label' => __("Widgets", 'great'),
+								'label' => __("Social Widget", 'great'),
                                 'type' => 'sep-title',
                             ),
 							'sm_title_widget' => array(
@@ -186,11 +481,6 @@ $great_social_array = array(
                                 'sanitize_callback' => 'esc_attr',
                             )
 							);
-// FA Icons to choices array
-$fa_choices = array();
-foreach ( $fa_array as $fa ) {
-	$fa_choices = array_merge($fa_choices, array( "fa-$fa" => "$fa" ) );
-}
 
 // Social Media Links
 //$defaults = array('dropbox','facebook','flickr','linkedin','wordpress','instagram','foursquare','skype','twitter','vine','youtube','flickr');
@@ -202,6 +492,18 @@ for ($i=1;$i<=10;$i++) {
 							'sep_sm'.$i => array(
 								'label' => __("Custom Link", 'great') . " #$i",
                                 'type' => 'sep-title',
+                            ),
+							'sm_icon'.$i => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'sm_color'.$i => array(
+								'default' => "#09F",
+                                'type' => 'color',
+                                'label' => __('Color', 'great'),
+                                'sanitize_callback' => 'sanitize_hex_color',
                             ),
                             'sm_title'.$i => array(
 								'default' => __("Title", 'great'),
@@ -221,19 +523,6 @@ for ($i=1;$i<=10;$i++) {
                                 'default' => 1,
                                 'sanitize_callback' => 'great_boolean',
                             ),
-							'sm_icon'.$i => array(
-								'default' => 'fa---- ' . __('Hide', 'great') . ' ---',
-                                'type' => 'select',
-                                'label' => __('Icon', 'great'),
-                                'sanitize_callback' => 'esc_attr',
-								'choices' => $fa_choices
-                            ),
-							'sm_color'.$i => array(
-								'default' => "#09F",
-                                'type' => 'color',
-                                'label' => __('Color', 'great'),
-                                'sanitize_callback' => 'sanitize_hex_color',
-                            )
 							);
 	$great_social_array = array_merge($great_social_array, $great_social_item);
 }
@@ -251,16 +540,27 @@ if ( $req == "social" ) return $great_social_array;
             'great' => array(
                 'priority'       => 9,
                 'title'          => __('Great Theme Options', 'great'),
-                'description'    => __('Great Theme Options', 'great'),
+                'description'    => '',
                 'sections' => array(
                     'header' => array(
                         'title' => __('Header', 'great'),
                         'fields' => array(
+							'sep_hint_header' => array(
+								'label' => __("Hint", 'great'),
+                                'type' => 'info',
+								'desc' => sprintf( "%1s (%2s)", __('Suggested image dimensions:', 'great'), '350 x 100' ),
+                            ),
                             'logo' => array(
 								'default' => get_template_directory_uri() . '/images/logo.png',
                                 'type' => 'image',
                                 'label' => __('Logo Upload', 'great'),
                                 'sanitize_callback' => 'esc_url_raw',
+                            ),
+							'header_icon' => array(
+                                'type' => 'fa',
+                                'label' => __('Site Icon', 'great'),
+								'default' => 'fa-star',
+                                'sanitize_callback' => 'esc_attr',
                             ),
 							'search_form' => array(
 								'type' => 'checkbox',
@@ -268,6 +568,10 @@ if ( $req == "social" ) return $great_social_array;
 								'default' => 1,
 								'sanitize_callback' => 'great_boolean',
 							),
+							'separotor_contact_info' => array(
+								'label' => __("Contact Info", 'great'),
+                                'type' => 'sep-title',
+                            ),
 							'adress' => array(
                                 'type' => 'text',
                                 'label' => __('Address', 'great'),
@@ -322,78 +626,48 @@ if ( $req == "social" ) return $great_social_array;
                                 'default' => '',
                                 'sanitize_callback' => 'esc_url',
                             ),
-                        ),
-                    ),
-					'footer' => array(
-                        'title' => __('Footer', 'great'),
-                        'fields' => array(
-							'separotor_quote' => array(
-								'label' => __("Quote", 'great'),
-                                'type' => 'sep-title',
-                            ),
-							'footer_quote' => array(
-                                'type' => 'text',
-                                'label' => __('Quote', 'great'),
-								'default' => '"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."',
+							'hours' => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Hours', 'great'),
+								'default' => sprintf( "%1s - %2s: 9:00 - 18:30", __('Monday', 'great'), __('Friday', 'great') ),
                                 'sanitize_callback' => 'esc_attr',
                             ),
-							'footer_author' => array(
-                                'type' => 'text',
-								'default' => 'Dolor sit Amet',
-                                'label' => __('Author', 'great'),
-                                'sanitize_callback' => 'esc_attr',
-                            ),
-							'footer_quote_color' => array(
+							'hours_color' => array(
                                 'type' => 'color',
-								'label' => sprintf('%1$s [ %2$s ]', __('Color', 'great'), __('Quote', 'great')),
-                                'default' => '#444545',
+                                'label' => sprintf('%1$s [ %2$s ]', __('Text color', 'great'), __('Hours', 'great')),
+                                'default' => '#645F54',
                                 'sanitize_callback' => 'sanitize_hex_color',
                             ),
-							'footer_link' => array(
+							'hours_url' => array(
                                 'type' => 'text',
-								'default' => esc_url( home_url( '/' ) ),
-                                'label' => __('Link', 'great'),
+                                'label' => sprintf('%1$s [ %2$s ]', __('Custom Link', 'great'), __('Hours', 'great')),
+                                'default' => '',
                                 'sanitize_callback' => 'esc_url',
                             ),
-							'footer_linktext' => array(
-                                'type' => 'text',
-								'default' => __('Read more...', 'great'),
-                                'label' => __('Link Text', 'great'),
-                                'sanitize_callback' => 'esc_attr',
-                            ),
-							'footer_link_color' => array(
-                                'type' => 'color',
-								'label' => sprintf('%1$s [ %2$s ]', __('Color', 'great'), __('Link', 'great')),
-                                'default' => '#61CBE6',
-                                'sanitize_callback' => 'sanitize_hex_color',
-                            ),
-							'separotor_info_text' => array(
-								'label' => __("Footer information text", 'great'),
+							'separotor_contact_info2' => array(
+								'label' => __("Contact Info", 'great'),
                                 'type' => 'sep-title',
                             ),
-							'footer_infotext' => array(
-                                'type' => 'text',
-								'default' => '',
-                                'label' => __('Text', 'great'), 
-                                'sanitize_callback' => 'esc_attr',
-                            ),
-							'footer_infotext_color' => array(
-                                'type' => 'color',
-								'label' => __('Text color', 'great'),
-                                'default' => '',
-                                'sanitize_callback' => 'sanitize_hex_color',
-                            ),
-							'footer_infotext_size' => array(
-								'type' => 'range',
-								'label' => __('Font Sizes', 'great'),
-								'default' => '12',
+							'contact_info_alignment' => array(
+								'type' => 'disabled-select',
+								'label' => __('Alignment', 'great'),
+								'default' => 'left',
 								'sanitize_callback' => 'esc_attr',
-								'input_attrs' => array(
-									'min'   => 8,
-									'max'   => 64,
-									'step'  => 1,
-								),
+								'choices' => array( 'left'=>__('Align Left', 'great'),
+													'right'=>__('Align Right', 'great')),
 							),
+							'contact_header' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Header', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'contact_footer' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Footer', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
                         ),
                     ),
 					'style' => array(
@@ -435,36 +709,17 @@ if ( $req == "social" ) return $great_social_array;
                                 'default' => '',
                                 'sanitize_callback' => 'sanitize_hex_color',
                             ),
-							'separotor_menu' => array(
-								'label' => __("Menu", 'great'),
+							'separotor_front_page' => array(
+								'label' => __("Front Page", 'great'),
                                 'type' => 'sep-title',
                             ),
-							'menu_font_size' => array(
-                                'type' => 'select',
-								'label' => __('Font Sizes', 'great'),
-                                'default' => '18',
-								'choices' => great_fontsize_array(),
-                                'sanitize_callback' => 'absint',
+							'display_front_page_posts' => array(
+                                'type' => 'checkbox',
+                                'label' => __('Your latest posts', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
                             ),
-							'menu_font_color' => array(
-                                'type' => 'color',
-								'label' => __('Text color', 'great'),
-                                'default' => '#f5f4f3',
-                                'sanitize_callback' => 'sanitize_hex_color',
-                            ),
-							'menu_font_color_hover' => array(
-                                'type' => 'color',
-								'label' => sprintf('%s #2', __('Color', 'great')),
-                                'default' => '#feea3a',
-                                'sanitize_callback' => 'sanitize_hex_color',
-                            ),
-							'menu_bg_image' => array(
-								'default' => get_template_directory_uri() . '/images/menu_bg.png',
-                                'type' => 'image',
-                                'label' => __('Background Image', 'great'),
-                                'sanitize_callback' => 'esc_url_raw',
-                            ),
-							'separotor_posts' => array(
+							'separotor_allposts' => array(
 								'label' => __("All Posts", 'great'),
                                 'type' => 'sep-title',
                             ),
@@ -487,12 +742,6 @@ if ( $req == "social" ) return $great_social_array;
 								'choices' => great_fontsize_array(),
                                 'sanitize_callback' => 'absint',
                             ),
-							'readmore_text' => array(
-                                'type' => 'text',
-								'default' => __('Read more...', 'great'),
-                                'label' => __('Read more...', 'great'),
-                                'sanitize_callback' => 'esc_attr',
-                            ),
 							'enable_fih_pages' => array(
                                 'type' => 'checkbox',
                                 'label' => __('Enable featured image header for pages', 'great'),
@@ -504,6 +753,34 @@ if ( $req == "social" ) return $great_social_array;
                                 'label' => __('Enable featured image header for posts', 'great'),
                                 'default' => 1,
                                 'sanitize_callback' => 'great_boolean',
+                            ),
+							'display_post_nav' => array(
+                                'type' => 'checkbox',
+                                'label' => __('Posts navigation', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'separotor_excertp' => array(
+								'label' => __("Excerpt View", 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'excerpt_size' => array(
+								'type' => 'number',
+								'label' => __('Auto excerpt length', 'great'),
+								'default' => '35',
+								'sanitize_callback' => 'esc_attr',
+							),
+							'excerpt_more' => array(
+                                'type' => 'text',
+								'default' => __('...', 'great'),
+                                'label' => __('More string at the end of the excerpt', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'readmore_text' => array(
+                                'type' => 'text',
+								'default' => __('Read more...', 'great'),
+                                'label' => __('Read more...', 'great'),
+                                'sanitize_callback' => 'esc_attr',
                             ),
 							'separotor_meta' => array(
 								'label' => __("Metadata", 'great'),
@@ -545,12 +822,6 @@ if ( $req == "social" ) return $great_social_array;
                                 'default' => '#BABABA',
                                 'sanitize_callback' => 'sanitize_hex_color',
                             ),
-							'display_post_nav' => array(
-                                'type' => 'checkbox',
-                                'label' => __('Posts navigation', 'great'),
-                                'default' => 1,
-                                'sanitize_callback' => 'great_boolean',
-                            ),
 							'separotor_footer_style' => array(
 								'label' => __("Footer", 'great'),
                                 'type' => 'sep-title',
@@ -582,24 +853,62 @@ if ( $req == "social" ) return $great_social_array;
 							
                         ),
                     ),
-					'slider' => array(
-                        'title' => __('Slider', 'great'),
-                        'fields' => great_generate_array ("slider"),
-                    ),
-					'featured_page' => array(
-                        'title' => __('Featured Pages', 'great'),
-                        'fields' => great_generate_array ("featured-page"),
-                    ),
-					'social' => array(
-                        'title' => __('Social Media', 'great'),
-                        'fields' => great_generate_array ("social"),
-                    ),
+					'reading' => array(
+						'title' => __('Reading Settings', 'great'),
+						'fields' => array(
+							'reading_front_page' => array(
+								'type' => 'select',
+								'label' => __('Front Page', 'great'),
+								'default' => 'summary',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'summary'=>__('Summary', 'great'),
+													'full'=>__('Full text', 'great'))
+							),
+							'reading_archive' => array(
+								'type' => 'select',
+								'label' => __('Archives', 'great'),
+								'default' => 'summary',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'summary'=>__('Summary', 'great'),
+													'full'=>__('Full text', 'great')),
+							),
+							'reading_search' => array(
+								'type' => 'select',
+								'label' => __('Search Results', 'great'),
+								'default' => 'summary',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'summary'=>__('Summary', 'great'),
+													'full'=>__('Full text', 'great'))
+							),
+						),
+					),
 					'layout' => array(
 						'title' => __('Layout', 'great'),
 						'fields' => array(
+							'site_size' => array(
+								'type' => 'select',
+								'label' => __('Site size', 'great'),
+								'default' => 'default',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'default'=>__('Default', 'great'),
+													'full'=>__('Full Size', 'great'),
+													'custom'=>__('Custom Size', 'great')),
+							),
+							'site_size_percent' => array(
+                                'type' => 'rangeslider',
+                                'label' => __('Custom Size', 'great'),
+								'default' => '100',
+                                'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'min' => 10,
+													'max'=> 100,)							
+                            ),
+							'separotor_sidebar' => array(
+								'label' => __('Sidebar', 'great'),
+                                'type' => 'sep-title',
+                            ),
 							'layout' => array(
 								'type' => 'select',
-								'label' => sprintf('%1$s &rarr; %2$s', __('Sidebar', 'great'), __('Alignment', 'great')),
+								'label' => __('Alignment', 'great'),
 								'default' => 'left',
 								'sanitize_callback' => 'esc_attr',
 								'choices' => array( 'left'=>__('Align Right', 'great'),
@@ -610,14 +919,13 @@ if ( $req == "social" ) return $great_social_array;
                                 'type' => 'sep-title',
                             ),
 							'logo_size' => array(
-								'type' => 'range',
+								'type' => 'rangeslider',
 								'label' => sprintf('%1$s &rarr; %2$s (%3$s)', __('Logo', 'great'), __('Size', 'great'), __('Set to 0 for default.', 'great')),
 								'default' => '0',
 								'sanitize_callback' => 'esc_attr',
-								'input_attrs' => array(
+								'choices' => array(
 									'min'   => 0,
 									'max'   => 100,
-									'step'  => 1,
 								),
 							),
 							'logo_top_margin' => array(
@@ -653,6 +961,335 @@ if ( $req == "social" ) return $great_social_array;
 							),
 						),
 					),
+					'menu_settings' => array(
+						'title' => __('Menu Settings', 'great'),
+						'fields' => array(
+							'menu_hide' => array(
+                                'type' => 'checkbox',
+                                'label' => sprintf('%1$s [ %2$s ]', __('Hide', 'great'), __('Main menu', 'great')),
+                                'default' => 0,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'menu_alignment' => array(
+                                'type' => 'disabled-select',
+                                'label' => __('Alignment', 'great'),
+                                'default' => "left",
+								'choices' => array(
+												'center' => __('Align center', 'great'),
+												'left' => __('Align left', 'great'),
+												'right' => __('Align right', 'great'),
+												),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'menu_font_size' => array(
+                                'type' => 'select',
+								'label' => __('Font Sizes', 'great'),
+                                'default' => '18',
+								'choices' => great_fontsize_array(),
+                                'sanitize_callback' => 'absint',
+                            ),
+							'menu_font_color' => array(
+                                'type' => 'color',
+								'label' => __('Text color', 'great'),
+                                'default' => '#f5f4f3',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'menu_font_color_hover' => array(
+                                'type' => 'color',
+								'label' => sprintf('%s #2', __('Text color', 'great')),
+                                'default' => '#feea3a',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'menu_bg_image' => array(
+								'default' => get_template_directory_uri() . '/images/menu_bg.png',
+                                'type' => 'image',
+                                'label' => __('Background Image', 'great'),
+                                'sanitize_callback' => 'esc_url_raw',
+                            ),
+							'menu_bg_image_size' => array(
+								'type' => 'select',
+								'label' => __('Image size', 'great'),
+								'default' => 'default',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'default'=>__('Default', 'great'),
+													'cover'=>__('Fit to menu', 'great')),
+							),
+							'menu_bg_image_position' => array(
+								'type' => 'select',
+								'label' => __('Background Position', 'great'),
+								'default' => 'bottom',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'top'=>__('Top', 'great'),
+													'bottom'=>__('Bottom', 'great')),
+							),
+							'separotor_submenu_settings' => array(
+								'label' => __('Submenu', 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'submenu_font_size' => array(
+                                'type' => 'disabled-select',
+								'label' => __('Font Sizes', 'great'),
+                                'default' => '18',
+								'choices' => great_fontsize_array(),
+                                'sanitize_callback' => 'absint',
+                            ),
+							'submenu_bg_color' => array(
+                                'type' => 'color',
+								'label' => __('Background color', 'great'),
+                                'default' => '',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'submenu_font_color' => array(
+                                'type' => 'color',
+								'label' => __('Text color', 'great'),
+                                'default' => '#999',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'submenu_font_color_hover' => array(
+                                'type' => 'color',
+								'label' => sprintf('%s #2', __('Text color', 'great')),
+                                'default' => '#666',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+						),
+					),
+					
+					'slider' => array(
+                        'title' => __('Slider', 'great'),
+                        'fields' => great_generate_array ("slider"),
+                    ),
+					'featured_page' => array(
+                        'title' => __('Featured Pages', 'great'),
+                        'fields' => great_generate_array ("featured-page"),
+                    ),
+					'social' => array(
+                        'title' => __('Social Media', 'great'),
+                        'fields' => great_generate_array ("social"),
+                    ),
+					'services' => array(
+						'title' => __('Services', 'great'),
+						'fields' => great_generate_array ("services"),
+					),
+					'projects' => array(
+						'title' => __('Projects', 'great'),
+						'fields' => great_generate_array ("projects"),
+					),
+					'clients' => array(
+						'title' => __('Clients', 'great'),
+						'fields' => great_generate_array ("clients"),
+					),
+					'about' => array(
+						'title' => __('About', 'great'),
+						'fields' => array(
+							'sep_about_info' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("About", 'great')),
+                                'type' => 'info',
+								'desc' => "<a href='http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme/' target='_blank'>How to add widgets?</a>",
+                            ),
+							'sep_about_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'about_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'about_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'about_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('In a few words, explain what this site is about.', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'about_source' => array(
+                                'type' => 'list-pages',
+								'default' => '',
+                                'label' => __('Add an About page', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'about_text_alignment' => array(
+								'type' => 'select',
+								'label' => __('Alignment', 'great'),
+								'default' => 'center',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array( 'left'=>__('Align Left', 'great'),
+													'center'=>__('Align Center', 'great'),
+													'right'=>__('Align Right', 'great')),
+							),
+						),
+					),
+					'blog' => array(
+						'title' => __('Blog', 'great'),
+						'fields' => array(
+							'sep_blog_info' => array(
+								'label' => sprintf(__("First, please enable '%s' widget.", 'great'), __("Blog", 'great')),
+                                'type' => 'info',
+								'desc' => "<a href='http://dinozoom.com/add-widgets-wordpress-blogsidebar-free-wordpress-theme/' target='_blank'>How to add widgets?</a>",
+                            ),
+							'sep_blog_header' => array(
+								'label' => __("Header", 'great'),
+                                'type' => 'sep-title',
+                            ),
+                            'blog_header' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'blog_header_icon' => array(
+								'default' => '',
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'blog_description' => array(
+                                'type' => 'textarea',
+                                'label' => __('Description', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'sep_blog_source' => array(
+								'label' => __("Source", 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'blog_source_category' => array(
+                                'type' => 'category',
+								'default' => 1,
+                                'label' => __('Select Category', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'blog_posts_per_page' => array(
+                                'type' => 'disabled-text',
+                                'label' => __('Blog pages show at most', 'great'),
+                                'default' => 15,
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'sep_blog_display_options' => array(
+								'label' => __("Display Options", 'great'),
+                                'type' => 'sep-title',
+                            ),							
+							'enable_blog_title' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Title', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'enable_blog_image' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Show Images', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'enable_blog_excerpt' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Display item content?', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+							'enable_blog_date' => array(
+                                'type' => 'disabled-checkbox',
+                                'label' => __('Display post date?', 'great'),
+                                'default' => 1,
+                                'sanitize_callback' => 'great_boolean',
+                            ),
+						),
+					),
+					'footer' => array(
+                        'title' => __('Footer', 'great'),
+                        'fields' => array(
+							'separotor_quote' => array(
+								'label' => __("Quote", 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'footer_quote_title' => array(
+                                'type' => 'text',
+                                'label' => __('Title', 'great'),
+								'default' => '',
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_quote' => array(
+                                'type' => 'text',
+                                'label' => __('Quote', 'great'),
+								'default' => '"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."',
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_author' => array(
+                                'type' => 'text',
+								'default' => 'Dolor sit Amet',
+                                'label' => __('Author', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_quote_color' => array(
+                                'type' => 'color',
+								'label' => sprintf('%1$s [ %2$s ]', __('Color', 'great'), __('Quote', 'great')),
+                                'default' => '#444545',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'footer_link' => array(
+                                'type' => 'text',
+								'default' => esc_url( home_url( '/' ) ),
+                                'label' => __('Link', 'great'),
+                                'sanitize_callback' => 'esc_url',
+                            ),
+							'footer_linktext' => array(
+                                'type' => 'text',
+								'default' => __('Read more...', 'great'),
+                                'label' => __('Link Text', 'great'),
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_link_icon' => array(
+                                'type' => 'fa',
+                                'label' => __('Icon', 'great'),
+								'default' => 'fa-arrow-circle-right',
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_link_color' => array(
+                                'type' => 'color',
+								'label' => sprintf('%1$s [ %2$s ]', __('Color', 'great'), __('Link', 'great')),
+                                'default' => '',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'separotor_footer_menu' => array(
+								'label' => __("Menu", 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'footer_menu_color' => array(
+                                'type' => 'color',
+								'label' => __('Text color', 'great'),
+                                'default' => '',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'separotor_info_text' => array(
+								'label' => __("Footer information text", 'great'),
+                                'type' => 'sep-title',
+                            ),
+							'footer_infotext' => array(
+                                'type' => 'text',
+								'default' => '',
+                                'label' => __('Text', 'great'), 
+                                'sanitize_callback' => 'esc_attr',
+                            ),
+							'footer_infotext_color' => array(
+                                'type' => 'color',
+								'label' => __('Text color', 'great'),
+                                'default' => '',
+                                'sanitize_callback' => 'sanitize_hex_color',
+                            ),
+							'footer_infotext_size' => array(
+								'type' => 'rangeslider',
+								'label' => __('Font Sizes', 'great'),
+								'default' => '12',
+								'sanitize_callback' => 'esc_attr',
+								'choices' => array(
+									'min'   => 8,
+									'max'   => 64,
+								),
+							),
+                        ),
+                    ),
 					'advanced' => array(
 						'title' => __('Advanced Options', 'great'),
 						'fields' => array(
@@ -717,6 +1354,7 @@ function great_reset_all_settings( $input ) {
 	if ( $input == 1 ) {
 		//Remove all set values
 		remove_theme_mods();
+		return new WP_Error( 'warning', __('Refresh the page to view full effects.', 'great') );
     } 
     else {
         return '';

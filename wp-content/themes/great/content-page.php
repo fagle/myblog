@@ -6,11 +6,15 @@
 
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( has_post_thumbnail() and get_theme_mod('enable_fih_pages' , 1 ) ):?> 
 	<div class="post-entry-media">
-    	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_post_thumbnail();?></a>
+    	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php
+		if ( basename(get_page_template()) == "no-sidebar.php" )
+			the_post_thumbnail(array(950));
+		else
+			the_post_thumbnail('great-image-header');
+		?></a>
     </div>
     <?php endif;?> 
 
