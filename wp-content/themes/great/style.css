@@ -544,7 +544,7 @@ a:active {
 	display: block;
 	width:100%;
 	position:relative;
-	min-height:50px;
+	/*min-height:50px;*/
 	border-radius:5px 5px 0 0;
 	background-image:url(images/menu_bg.png);
 	background-position:left bottom;
@@ -749,7 +749,7 @@ a:active {
 
 .site-main #nav-below a {
 	border-radius: 4px;
-	box-shadow: 1px 1px 0 #7d7d7d;
+	/*box-shadow: 1px 1px 0 #7d7d7d;*/
 	padding: 7px 10px;
 	color:#666;
 	margin-bottom: 20px;
@@ -1634,7 +1634,7 @@ header.site-header {
 	font-size:50px;
 	line-height:75px;
 	color: #565656;
-    text-shadow: 2px 1px 0 #f5f5f5, 3px 3px 0 #b8b8b5;
+    /*text-shadow: 2px 1px 0 #f5f5f5, 3px 3px 0 #b8b8b5;*/
 }
 .header-search .ss {
 	float:right;
@@ -1829,7 +1829,7 @@ article.page {
 	padding:15px 0 0;
 }
 .entry-content a {
-	color:#00B0C8;
+	/*color:#00B0C8;*/
 }
 .entry-content a:hover{
 	text-decoration:underline;
