@@ -134,8 +134,8 @@ function great_footer_quote() {
 	$quote = '';
 	if (!empty($b)) $quote .= sprintf('<div class="b">%s</div>', $b);
 	if (!empty($q)) $quote .= sprintf('<div class="q">%s</div>', $q);
-	if (!empty($a)) $quote .= sprintf('<div class="a">%s</div>', $a);
-	if (!empty($l)) $quote .= sprintf('<div class="l">%s</div>', $link);
+	//if (!empty($a)) $quote .= sprintf('<div class="a">%s</div>', $a);
+	//if (!empty($l)) $quote .= sprintf('<div class="l">%s</div>', $link);
 	
 	// Display Quote
 	if ( !empty($quote) ) printf('<div class="quote">%s</div>', $quote);
@@ -221,7 +221,7 @@ function great_wp_footer () { ?>
         
         <div class="site-info">
 		<div class="info-text"><?php echo esc_attr(get_theme_mod( 'footer_infotext' ));?></div>
-		<?php printf( __( 'Copyright &copy; %1$d %2$s.','great' ),date('Y'),'<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>');?> <?php _e( 'Powered by WordPress', 'great' ); ?><span class="sep"> &amp; </span><?php printf(__('Author: %s', 'great' ), 'Fagle, <strong><a target="_self" href="http://nubi.me/">nubi.me</a></strong>' ); ?><span class="sep"> &amp; </span><?php printf( __( '<span>Active theme</span> %s', 'great' ), 'Great' ); ?>
+		<?php printf( __( 'Copyright &copy; %1$d %2$s.','great' ),date('Y'),'<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>');?> <?php _e( 'Powered by WordPress', 'great' ); ?><span class="sep"> &amp; </span><?php printf(__('Author: %s', 'great' ), 'Fagle, <strong><a target="_self" href="http://nubi.me/">nubi.me</a></strong>' ); ?><span class="sep"> &amp; </span><?php printf( __( '<span>Active theme</span> %s', 'great' ), 'Great' ); ?> <br>
 		<?php printf( __( 'Copyright &copy; %1$d %2$s.','great' ),date('Y'),'<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>');?> <?php _e( 'Powered by WordPress', 'great' ); ?><span class="sep"> &amp; </span><?php printf('%s, <strong><a target="_self" href="http://ceewp.com/">%s ceewp.com</a></strong>', 'CeeWP', __( 'Theme by','great' ) ); ?><span class="sep"> &amp; </span><?php printf( __( '<span>%s is using the Great WordPress theme</span>', 'great' ), esc_attr( get_bloginfo( 'name', 'display' ) ) ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
