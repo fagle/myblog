@@ -72,6 +72,8 @@ function great_entry_footer() {
 		if ( $tags_list and get_theme_mod( 'display_post_tags', 1 ) ) {
 			printf( '<span class="tags-links"><i class="fa fa-tags"></i> ' . '%1$s' . '</span>', $tags_list );
 		}
+		$post_views = intval( get_post_meta( get_the_ID(), 'views', true ) );
+		echo '<span class="views"><i class="fa fa-eye"></i> ' . $post_views . '浏览</span>';
 	}
 
 
